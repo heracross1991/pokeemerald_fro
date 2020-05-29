@@ -5,7 +5,7 @@ LittlerootTown_MaysHouse_1F_MapScripts:: @ 81F88A5
 	.byte 0
 
 LittlerootTown_MaysHouse_1F_OnLoad: @ 81F88B5
-	compare VAR_LITTLEROOT_INTRO_STATE, 6
+	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 6
 	call_if_lt LittlerootTown_MaysHouse_1F_EventScript_SetMovingBoxes
 	call_if_set FLAG_RECEIVED_RUNNING_SHOES, LittlerootTown_MaysHouse_1F_EventScript_CheckShowShoesManual
 	end
@@ -26,11 +26,11 @@ LittlerootTown_MaysHouse_1F_EventScript_ShowRunningShoesManual:: @ 81F88EA
 	return
 
 LittlerootTown_MaysHouse_1F_OnTransition: @ 81F88F4
-	compare VAR_LITTLEROOT_INTRO_STATE, 3
+	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 3
 	call_if_eq LittlerootTown_MaysHouse_1F_EventScript_MoveMomToDoor
-	compare VAR_LITTLEROOT_INTRO_STATE, 5
+	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 5
 	call_if_eq LittlerootTown_MaysHouse_1F_EventScript_MoveMomToStairs
-	compare VAR_LITTLEROOT_INTRO_STATE, 6
+	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 6
 	call_if_eq LittlerootTown_MaysHouse_1F_EventScript_MoveMomToTV
 	end
 
@@ -51,9 +51,9 @@ LittlerootTown_MaysHouse_1F_EventScript_MoveMomToDoor:: @ 81F892E
 
 @ Many of the below scripts have no gender check because they assume youre in the correct house
 LittlerootTown_MaysHouse_1F_OnFrame: @ 81F893A
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 3, LittlerootTown_MaysHouse_1F_EventScript_EnterHouseMovingIn
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 5, LittlerootTown_MaysHouse_1F_EventScript_GoUpstairsToSetClock
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_MaysHouse_1F_EventScript_PetalburgGymReport
+	map_script_2 VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 3, LittlerootTown_MaysHouse_1F_EventScript_EnterHouseMovingIn
+	map_script_2 VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 5, LittlerootTown_MaysHouse_1F_EventScript_GoUpstairsToSetClock
+	map_script_2 VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 6, LittlerootTown_MaysHouse_1F_EventScript_PetalburgGymReport
 	map_script_2 VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 1, LittlerootTown_MaysHouse_1F_EventScript_YoureNewNeighbor
 	map_script_2 VAR_LITTLEROOT_HOUSES_STATE_MAY, 3, PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV
 	.2byte 0
@@ -210,7 +210,7 @@ LittlerootTown_MaysHouse_1F_EventScript_MeetRival:: @ 81F8A8B
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
 	delay 30
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
-	setvar VAR_LITTLEROOT_TOWN_STATE, 1
+	setvar VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 1
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall

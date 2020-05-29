@@ -1,19 +1,34 @@
 LittlerootTown_BrendansHouse_1F_MapScripts:: @ 81F7755
 	map_script MAP_SCRIPT_ON_LOAD, LittlerootTown_BrendansHouse_1F_OnLoad
+	//map_script MAP_SCRIPT_ON_FRAME_TABLE, LakeMead_FrosHouse_1F_OnFrame
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_BrendansHouse_1F_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_BrendansHouse_1F_OnFrame
 	.byte 0
 
+
+//LakeMead_FrosHouse_1F_OnLoad:
+lockall
+//applymovement OBJ_EVENT_ID_PLAYER, m1
+waitmovement 0
+setvar VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 1
+releaseall
+end
+
+//m1:
+face_up
+step_end
+
 LittlerootTown_BrendansHouse_1F_OnLoad: @ 81F7765
-	compare VAR_LITTLEROOT_INTRO_STATE, 6
-	call_if_lt LittlerootTown_BrendansHouse_1F_EventScript_SetMovingBoxes
-	call_if_set FLAG_RECEIVED_RUNNING_SHOES, LittlerootTown_BrendansHouse_1F_EventScript_CheckShowShoesManual
+	//compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 6
+	//call_if_lt LittlerootTown_BrendansHouse_1F_EventScript_SetMovingBoxes
+	//call_if_set FLAG_RECEIVED_RUNNING_SHOES, LittlerootTown_BrendansHouse_1F_EventScript_CheckShowShoesManual
+	setobjectxyperm 1, 3, 5
 	end
 
 LittlerootTown_BrendansHouse_1F_EventScript_SetMovingBoxes:: @ 81F777A
 	setmetatile 5, 4, METATILE_BrendansMaysHouse_MovingBox_Open, 1
 	setmetatile 5, 2, METATILE_BrendansMaysHouse_MovingBox_Closed, 1
-	return
+	return 
 
 LittlerootTown_BrendansHouse_1F_EventScript_CheckShowShoesManual:: @ 81F778D
 	checkplayergender
@@ -26,11 +41,11 @@ LittlerootTown_BrendansHouse_1F_EventScript_ShowRunningShoesManual:: @ 81F779A
 	return
 
 LittlerootTown_BrendansHouse_1F_OnTransition: @ 81F77A4
-	compare VAR_LITTLEROOT_INTRO_STATE, 3
+	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 3
 	call_if_eq LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToDoor
-	compare VAR_LITTLEROOT_INTRO_STATE, 5
+	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 5
 	call_if_eq LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToStairs
-	compare VAR_LITTLEROOT_INTRO_STATE, 6
+	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 6
 	call_if_eq LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToTV
 	end
 
@@ -52,9 +67,10 @@ LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToDoor:: @ 81F77DE
 @ Many of the below scripts have no gender check because they assume youre in the correct house
 @ The below SS Ticket script uses Mays house state by accident(?), but theyre both set identically after the intro
 LittlerootTown_BrendansHouse_1F_OnFrame: @ 81F77EA
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 3, LittlerootTown_BrendansHouse_1F_EventScript_EnterHouseMovingIn
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 5, LittlerootTown_BrendansHouse_1F_EventScript_GoUpstairsToSetClock
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_BrendansHouse_1F_EventScript_PetalburgGymReport
+	//map_script_2 VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 0, LakeMead_FrosHouse_1F_SetFroFacingUp
+	map_script_2 VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 3, LittlerootTown_BrendansHouse_1F_EventScript_EnterHouseMovingIn
+	map_script_2 VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 5, LittlerootTown_BrendansHouse_1F_EventScript_GoUpstairsToSetClock
+	map_script_2 VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 6, LittlerootTown_BrendansHouse_1F_EventScript_PetalburgGymReport
 	map_script_2 VAR_LITTLEROOT_HOUSES_STATE_MAY, 1, LittlerootTown_BrendansHouse_1F_EventScript_YoureNewNeighbor
 	map_script_2 VAR_LITTLEROOT_HOUSES_STATE_MAY, 3, PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV
 	.2byte 0
@@ -176,7 +192,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_MeetRival:: @ 81F78E2
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
 	delay 30
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
-	setvar VAR_LITTLEROOT_TOWN_STATE, 1
+	setvar VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 1
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall
@@ -445,4 +461,4 @@ PlayersHouse_1F_Text_WhatColorDidTheySay: @ 81F8351
 
 PlayersHouse_1F_Text_StillUnknownPokemon: @ 81F83A1
 	.string "MOM: Well, isn't that something!\n"
-	.string "There are still unknown POKéMON.$"
+	.string "There are still unknown POKéMON.$" 

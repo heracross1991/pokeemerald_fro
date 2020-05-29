@@ -8,7 +8,7 @@ LittlerootTown_MaysHouse_2F_OnTransition: @ 81F92A1
 	call_if_lt LittlerootTown_MaysHouse_2F_EventScript_CheckSetReadyToMeetMay
 	compare VAR_LITTLEROOT_RIVAL_STATE, 3
 	call_if_ge LittlerootTown_MaysHouse_2F_EventScript_CheckShouldUpdateMayPos
-	compare VAR_LITTLEROOT_INTRO_STATE, 4
+	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 4
 	call_if_eq PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
 	call SecretBase_EventScript_SetDecorationFlags
 	setvar VAR_SECRET_BASE_INITIALIZED, 0
@@ -84,7 +84,7 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMay:: @ 81F934A
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_POKE_BALL
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
-	setvar VAR_LITTLEROOT_TOWN_STATE, 1
+	setvar VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 1
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall

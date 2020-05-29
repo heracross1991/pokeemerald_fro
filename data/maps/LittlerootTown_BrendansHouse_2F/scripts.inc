@@ -8,7 +8,7 @@ LittlerootTown_BrendansHouse_2F_OnTransition: @ 81F83EE
 	call_if_lt LittlerootTown_BrendansHouse_2F_EventScript_CheckSetReadyToMeetBrendan
 	compare VAR_LITTLEROOT_RIVAL_STATE, 3
 	call_if_ge LittlerootTown_BrendansHouse_2F_EventScript_CheckShouldUpdateBrendanPos
-	compare VAR_LITTLEROOT_INTRO_STATE, 4
+	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 4
 	call_if_eq PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
 	call SecretBase_EventScript_SetDecorationFlags
 	setvar VAR_SECRET_BASE_INITIALIZED, 0
@@ -84,7 +84,7 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendan:: @ 81F8497
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_POKE_BALL
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
-	setvar VAR_LITTLEROOT_TOWN_STATE, 1
+	setvar VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 1
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall
