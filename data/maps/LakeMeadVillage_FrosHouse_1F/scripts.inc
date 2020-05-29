@@ -178,6 +178,8 @@ LakeMeadVillage_FrosHouse_1F_Mom_NPC::
 	faceplayer
 	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 2
 	goto_if_eq Script_LakeMeadVillage_FrosHouse_1F_GoDownstairsStandard
+	compare VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 4
+	goto_if_ge Script_LakeMeadVillage_FrosHouse_1F_MomAfterRecievedPoke
 	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 3
 	goto_if_ge Script_LakeMeadVillage_FrosHouse_1F_MomRandom1
 	end
@@ -193,6 +195,10 @@ Script_LakeMeadVillage_FrosHouse_1F_MomRandom1::
 	case 0, Script_LakeMeadVillage_FrosHouse_1F_MomRandomText1
 	case 1, Script_LakeMeadVillage_FrosHouse_1F_MomRandomText2
 	case 2, Script_LakeMeadVillage_FrosHouse_1F_MomRandomText3
+	end
+
+Script_LakeMeadVillage_FrosHouse_1F_MomAfterRecievedPoke::
+	msgbox T_FrosHouse1F_YouFoundTheProfessor, MSGBOX_NPC
 	end
 
 Script_LakeMeadVillage_FrosHouse_1F_MomRandomText1::
@@ -395,3 +401,6 @@ Text_LakeMeadVillageFros_1F_TV2:
 	
 T_FrosHouse1F_IsiahWasJustHere:
 	.string "Mom: Isiah was just here. He said \nhe left something in your room. \pHe was down there for a while \nlooking for it...$"
+	
+T_FrosHouse1F_YouFoundTheProfessor:
+	.string "Mom: Oh you found the Professor? \nAnd he gave you your Pokémon? \pThat's great! Safe travels then, \nand good luck!$"
