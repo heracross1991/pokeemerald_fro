@@ -63,6 +63,12 @@ end
 release
 end
 
+
+Script_JagowWay_NorthSignPost::
+msgbox T_JagowWay_SignPostForLakeMead, MSGBOX_SIGN
+release
+end
+
 //Movements
 
 M_JagowWay_JohnLeaves:
@@ -98,6 +104,10 @@ walk_left
 step_end
 
 //Text
+
+T_JagowWay_SignPostForLakeMead:
+	.string "{DOWN_ARROW} Walmore Town \n{UP_ARROW} Sy Pathway$"
+	
 
 T_JagowWay_JohnBattleDialouge:
 	.string "John: Hey Fro, before you go out \ninto the wild why don't I show you \lhow to battle with your new \lPokemon?\p"
