@@ -1684,6 +1684,8 @@ static const u8 sText_Opposing1[] = _("The opposing");
 static const u8 sText_Your2[] = _("your");
 static const u8 sText_Opposing2[] = _("the opposing");
 
+static const u8 sText_JohnBattleBeing[] = _("John: In a Pokémon battle, you want \nto try to attack your opponents \lPokémon and get it's HP to 0. \pFro: Wow sounds complicated. \pJohn: Let me finish. An attacking \nmove can either be Physical or \lSpecial, and their power directly \lcorresponds to your Pokemon's \lAttack and Special Attack stats! \pYou can also use non attacking \nmoves to raise your stats, or lower \lyour opponents! \pFro: Can we just get this over \nwith?");
+
 // This is four lists of moves which use a different attack string in Japanese
 // to the default. See the documentation for ChooseTypeOfMoveUsedString for more detail.
 static const u16 sGrammarMoveUsedTable[] =
@@ -3565,7 +3567,9 @@ struct TrainerSlide
 
 static const struct TrainerSlide sTrainerSlides[] =
 {
-    {0x291, sText_AarghAlmostHadIt, sText_BoxIsFull, sText_123Poof},
+	{TRAINER_MAY_ROUTE_103_MUDKIP, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
+	{TRAINER_MAY_ROUTE_103_TREECKO, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
+	{TRAINER_MAY_ROUTE_103_TORCHIC, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
 };
 
 static u32 GetEnemyMonCount(bool32 onlyAlive)

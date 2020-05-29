@@ -4485,7 +4485,7 @@
       "id": "LAYOUT_WALMORE_TOWN",
       "name": "WalmoreTown_Layout",
       "width": 40,
-      "height": 20,
+      "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/WalmoreTown/border.bin",

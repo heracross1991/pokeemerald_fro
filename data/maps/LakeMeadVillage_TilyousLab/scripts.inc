@@ -474,7 +474,7 @@ lock
 compare VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 3
 goto_if_eq Script_TilyousLab_GoAheadAnthony
 compare VAR_LAKE_MEAD_VILLAGE_TOWN_STATE 4
-goto_if_eq Script_TilyousLab_GoodLuckOnYourAdventure
+goto_if_ge Script_TilyousLab_GoodLuckOnYourAdventure
 release
 end
 

@@ -17,16 +17,50 @@
       "direction": "left",
       "offset": 0,
       "map": "MAP_LAKE_MEAD_VILLAGE"
+    },
+    {
+      "direction": "right",
+      "offset": 58,
+      "map": "MAP_WALMORE_TOWN"
     }
   ],
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_2",
+      "x": 8,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN"
+    }
   ],
   "warp_events": [
 
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_LAKE_MEAD_VILLAGE_TOWN_STATE",
+      "var_value": "4",
+      "script": "Script_JagowWay_StarterBattle"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_LAKE_MEAD_VILLAGE_TOWN_STATE",
+      "var_value": "4",
+      "script": "Script_JagowWay_StarterBattle2"
+    }
   ],
   "bg_events": [
     {
@@ -35,7 +69,7 @@
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Script_JagowWay_NorthSignPost"
     },
     {
       "type": "sign",
