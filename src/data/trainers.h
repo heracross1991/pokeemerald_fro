@@ -7498,7 +7498,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("John"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_MayRoute103Torchic),
         .party = {.NoItemDefaultMoves = sParty_MayRoute103Torchic},
     },
@@ -11970,3 +11970,8 @@ const struct Trainer gTrainers[] = {
     },
 
 };
+
+
+
+
+

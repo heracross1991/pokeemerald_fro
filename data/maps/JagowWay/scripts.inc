@@ -51,7 +51,9 @@ Script_JagowWay_StarterBattle2::
 	
 Script_JagowWay_AfterJohnBattle:
 setvar VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 5
-msgbox T_JohnAfterBattle
+msgbox T_JohnAfterBattle MSGBOX_DEFAULT
+closemessage
+fadedefaultbgm
 applymovement 1, M_JagowWay_JohnLeaves
 waitmovement 1
 removeobject 1
