@@ -10,6 +10,8 @@ MS_LakeMeadVillage_TilyousLab_OnLoad::
 	compare VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 2
 	goto_if_lt Script_TilyousLab_RemoveTilyouBobbyJohn
 	goto_if_eq Script_TilyousLab_ShowTilyouBobbyJohn
+	compare VAR_WALMORE_TOWN_STATE, 1
+	goto_if_eq Script_TilyousLab_MoveTilyouPokedex
 	end
 
 MS_LakeMeadVillage_TilyousLab_OnFrame::
@@ -17,6 +19,11 @@ MS_LakeMeadVillage_TilyousLab_OnFrame::
 	.2byte 0
 	
 //Scripts
+
+Script_TilyousLab_MoveTilyouPokedex:
+setobjectxyperm 1, 3, 2
+setobjectmovementtype 1, MOVEMENT_TYPE_FACE_UP
+end
 
 Script_TilyousLab_RemoveTilyouBobbyJohn:
 	removeobject 1
@@ -471,12 +478,31 @@ step_end
 
 Script_TilyousLab_NPC_Tilyou::
 lock
+compare VAR_WALMORE_TOWN_STATE, 1
+goto_if_eq Script_TilyousLab_TilyouGivesPokedex
 compare VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 3
 goto_if_eq Script_TilyousLab_GoAheadAnthony
 compare VAR_LAKE_MEAD_VILLAGE_TOWN_STATE 4
 goto_if_ge Script_TilyousLab_GoodLuckOnYourAdventure
 release
 end
+
+Script_TilyousLab_TilyouGivesPokedex:
+faceplayer
+msgbox T_TilyousLab_FroGivesParcel, MSGBOX_DEAFULT
+applymovement 1, Common_Movement_Delay48
+waitmovement 0
+playfanfare
+msgbox T_TilyousLab_RecievedPokedex
+waitfanfare
+msgbox T_TilyousLab_ExplainPokedex
+closemessage
+release
+end
+
+
+end
+
 
 Script_TilyousLab_GoAheadAnthony:
 msgbox T_TilyousLab_GoAheadAnthony, MSGBOX_NPC
@@ -616,3 +642,17 @@ T_TilyousLab_HeWontStayLong:
 
 T_TilyousLab_WonAwards:
 	.string "Prof. Tilyou has won awards for his \nworld class Pokéresearch.$"
+	
+T_TilyousLab_FroGivesParcel:
+	.string "Fro: I was at the Pokémart in Walmore Town and the clerk said your package was mistakenly delivered to his store.\p"
+	.string "Prof Tilyou: Wowie, thanks Anthony! I've been fighting with amazon about this for quite a while. They were insistant that it was delivered to me. I had just about given up and was about to order another with free two day shipping!"
+	.string "Anyway, this is the Pokédex I have been waiting for to help with my research. Although, I've been so busy lately"
+	.string "I don't know how often I can use it. I have an idea,"
+	.string "why don't you take the Pokédex and help me with my research while you travel?$"
+	
+T_TilyousLab_RecievedPokedex:
+	.string "You recieved the Pokédex!$"
+	
+T_TilyousLab_ExplainPokedex:
+	.string "
+	
