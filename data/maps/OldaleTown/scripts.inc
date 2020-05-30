@@ -10,9 +10,9 @@ OldaleTown_OnTransition: @ 81E8EA8
 	call_if_set FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_SetOldaleState
 	end
 
-@ This script seems pointless because nothing uses VAR_OLDALE_TOWN_STATE
+@ This script seems pointless because nothing uses VAR_WALMORE_TOWN_STATE
 OldaleTown_EventScript_SetOldaleState:: @ 81E8ECC
-	setvar VAR_OLDALE_TOWN_STATE, 1
+	setvar VAR_WALMORE_TOWN_STATE, 1
 	return
 
 OldaleTown_EventScript_BlockWestEntrance:: @ 81E8ED2

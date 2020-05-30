@@ -2,6 +2,7 @@ LakeMeadVillage_FrosHouse_1F_MapScripts::
 	
 	map_script MAP_SCRIPT_ON_LOAD, LakeMeadVillage_FrosHouse_1F_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LakeMeadVillage_FrosHouse_1F_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LakeMeadVillage_FrosHouse_1F_OnWarp
 	.byte 0
 
 //NEW GAME SEQUENCE STARTS HERE
@@ -121,12 +122,20 @@ LakeMeadVillage_FrosHouse_1F_MoveMom:
 	setflag FLAG_HIDE_MOM
 	end
 
-
+LakeMead_FrosHouse_1F_DirectionNorth:
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	end
+	
 LakeMeadVillage_FrosHouse_1F_OnFrame:
 	map_script_2 VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 4, LakeMeadVillage_FrosHouse_1F_IsiahWasJustHere
 	map_script_2 VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 0, LakeMead_FrosHouse_1F_SetFroFacingTV
 	.2byte 0
 
+
+LakeMeadVillage_FrosHouse_1F_OnWarp:
+	map_script_2 VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 0, LakeMead_FrosHouse_1F_DirectionNorth
+	.2byte 0
+	
 //Angelina NPC Script
 
 LakeMeadVillage_FrosHouse_1F_Angelina_NPC::

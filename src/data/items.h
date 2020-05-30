@@ -4742,10 +4742,10 @@ const struct Item gItems[] =
 
 // FireRed/LeafGreen key items
 
-    [ITEM_OAKS_PARCEL] =
+    [ITEM_TILYOUS_PARCEL] =
     {
-        .name = _("Oak's Parcel"),
-        .itemId = ITEM_OAKS_PARCEL,
+        .name = _("Prof's Parcel"),
+        .itemId = ITEM_TILYOUS_PARCEL,
         .price = 0,
         .description = sOaksParcelDesc,
         .importance = 2,
