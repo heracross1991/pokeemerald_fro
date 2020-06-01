@@ -489,13 +489,15 @@ end
 
 Script_TilyousLab_TilyouGivesPokedex:
 faceplayer
-msgbox T_TilyousLab_FroGivesParcel, MSGBOX_DEAFULT
+msgbox T_TilyousLab_FroGivesParcel, MSGBOX_DEFAULT
 applymovement 1, Common_Movement_Delay48
 waitmovement 0
-playfanfare
+playfanfare MUS_FANFA4
 msgbox T_TilyousLab_RecievedPokedex
 waitfanfare
 msgbox T_TilyousLab_ExplainPokedex
+setflag FLAG_SYS_POKEDEX_GET
+removeitem ITEM_TILYOUS_PARCEL, 1
 closemessage
 release
 end
@@ -644,15 +646,23 @@ T_TilyousLab_WonAwards:
 	.string "Prof. Tilyou has won awards for his \nworld class Pokéresearch.$"
 	
 T_TilyousLab_FroGivesParcel:
-	.string "Fro: I was at the Pokémart in Walmore Town and the clerk said your package was mistakenly delivered to his store.\p"
-	.string "Prof Tilyou: Wowie, thanks Anthony! I've been fighting with amazon about this for quite a while. They were insistant that it was delivered to me. I had just about given up and was about to order another with free two day shipping!"
-	.string "Anyway, this is the Pokédex I have been waiting for to help with my research. Although, I've been so busy lately"
-	.string "I don't know how often I can use it. I have an idea,"
-	.string "why don't you take the Pokédex and help me with my research while you travel?$"
+	.string "Fro: I was at the Pokémart in \nWalmore Town and the clerk said \lyour package was mistakenly \ldelivered to his store.\p"
+	.string "Prof Tilyou: Wowie, thanks Anthony! \nI've been fighting with amazon \labout this for quite a while. \pThey were insistant that it was \ndelivered to me. I had just about \lgiven up and was about to order \lanother with free two day shipping!\p"
+	.string "Anyway, this is the Pokédex I have \nbeen waiting for to help with my \lresearch. \pAlthough, I've been so busy lately\n"
+	.string "I don't know how often I can use \lit. I have an idea,"
+	.string "why don't you \ltake the Pokédex and help me with \lmy research while you travel?$"
 	
 T_TilyousLab_RecievedPokedex:
 	.string "You recieved the Pokédex!$"
 	
 T_TilyousLab_ExplainPokedex:
-	.string "
+	.string "Prof. Tilyou: The Pokédex is a high-tech\n"
+	.string "tool that automatically makes a record\l"
+	.string "of any Pokémon you meet or catch.\p"
+	.string "John and Bobby go everywhere\n"
+	.string "with it.\p"
+	.string "Whenever my kid catches a rare Pokémon\n"
+	.string "and records its data in the Pokédex,\l"
+	.string "he looks for me while I'm out\l"
+	.string "doing fieldwork, and shows me.$"
 	
