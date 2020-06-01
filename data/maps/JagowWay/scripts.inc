@@ -19,17 +19,17 @@ Script_JagowWay_StarterBattle::
 	end
 	
 Script_JagowWay_StarterBattleSnivy:
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_MUDKIP, T_JagowWay_JohnDefeated
+	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_MUDKIP, T_JagowWay_JohnDefeated
 	goto Script_JagowWay_AfterJohnBattle
 	end
 
 Script_JagowWay_StarterBattleMudkip:
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, T_JagowWay_JohnDefeated
+	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_TREECKO, T_JagowWay_JohnDefeated
 	goto Script_JagowWay_AfterJohnBattle
 	end
 
 Script_JagowWay_StarterBattleChimchar:
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TORCHIC, T_JagowWay_JohnDefeated
+	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_TORCHIC, T_JagowWay_JohnDefeated
 	goto Script_JagowWay_AfterJohnBattle
 	end	
 	

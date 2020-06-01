@@ -3567,9 +3567,9 @@ struct TrainerSlide
 
 static const struct TrainerSlide sTrainerSlides[] =
 {
-	{TRAINER_MAY_ROUTE_103_MUDKIP, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
-	{TRAINER_MAY_ROUTE_103_TREECKO, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
-	{TRAINER_MAY_ROUTE_103_TORCHIC, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
+	{TRAINER_JOHN_JAGOW_WAY_MUDKIP, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
+	{TRAINER_JOHN_JAGOW_WAY_TREECKO, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
+	{TRAINER_JOHN_JAGOW_WAY_TORCHIC, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
 };
 
 static u32 GetEnemyMonCount(bool32 onlyAlive)

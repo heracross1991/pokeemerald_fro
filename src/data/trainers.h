@@ -7405,7 +7405,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_BrendanRoute119Torchic},
     },
 
-    [TRAINER_MAY_ROUTE_103_MUDKIP] =
+    [TRAINER_JOHN_JAGOW_WAY_MUDKIP] =
     {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
@@ -7415,8 +7415,8 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_MayRoute103Mudkip),
-        .party = {.NoItemDefaultMoves = sParty_MayRoute103Mudkip},
+        .partySize = ARRAY_COUNT(sParty_JohnJagowWayMudkip),
+        .party = {.NoItemDefaultMoves = sParty_JohnJagowWayMudkip},
     },
 
     [TRAINER_MAY_ROUTE_110_MUDKIP] =
@@ -7447,7 +7447,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_MayRoute119Mudkip},
     },
 
-    [TRAINER_MAY_ROUTE_103_TREECKO] =
+    [TRAINER_JOHN_JAGOW_WAY_TREECKO] =
     {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
@@ -7457,8 +7457,8 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_MayRoute103Treecko),
-        .party = {.NoItemDefaultMoves = sParty_MayRoute103Treecko},
+        .partySize = ARRAY_COUNT(sParty_JohnJagowWayTreecko),
+        .party = {.NoItemDefaultMoves = sParty_JohnJagowWayTreecko},
     },
 
     [TRAINER_MAY_ROUTE_110_TREECKO] =
@@ -7489,7 +7489,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_MayRoute119Treecko},
     },
 
-    [TRAINER_MAY_ROUTE_103_TORCHIC] =
+    [TRAINER_JOHN_JAGOW_WAY_TORCHIC] =
     {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
@@ -7499,8 +7499,8 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_MayRoute103Torchic),
-        .party = {.NoItemDefaultMoves = sParty_MayRoute103Torchic},
+        .partySize = ARRAY_COUNT(sParty_JohnJagowWayTorchic),
+        .party = {.NoItemDefaultMoves = sParty_JohnJagowWayTorchic},
     },
 
     [TRAINER_MAY_ROUTE_110_TORCHIC] =
