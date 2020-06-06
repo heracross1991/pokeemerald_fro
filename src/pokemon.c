@@ -99,7 +99,7 @@ static const struct CombinedMove sCombinedMoves[2] =
 
 const u16 gSpeciesToHoennPokedexNum[NUM_SPECIES] = // Assigns all species to the Hoenn Dex Index (Summary No. for Hoenn Dex)
 {
-    SPECIES_TO_HOENN(TREECKO),
+    SPECIES_TO_HOENN(SNIVY),
     SPECIES_TO_HOENN(GROVYLE),
     SPECIES_TO_HOENN(SCEPTILE),
     SPECIES_TO_HOENN(TORCHIC),
@@ -1157,7 +1157,7 @@ const u16 gSpeciesToNationalPokedexNum[NUM_SPECIES] = // Assigns all species to 
 
 const u16 gHoennToNationalOrder[HOENN_DEX_COUNT] = // Assigns Hoenn Dex Pokémon (Using National Dex Index)
 {
-    HOENN_TO_NATIONAL(TREECKO),
+    HOENN_TO_NATIONAL(SNIVY),
     HOENN_TO_NATIONAL(GROVYLE),
     HOENN_TO_NATIONAL(SCEPTILE),
     HOENN_TO_NATIONAL(TORCHIC),
