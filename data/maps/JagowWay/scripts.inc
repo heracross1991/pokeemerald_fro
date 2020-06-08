@@ -2,6 +2,12 @@ JagowWay_MapScripts::
 	.byte 0
 
 
+//Need to code an event that will stop player from going south near walmore town until after pokedex is recived in tilyous lab in lake mead village.
+//At this point the variables will be VAR_LAKE_MEAD_VILLAGE_TOWN_STATE 5, VAR_LAKE_MEAD_VILLAGE_INTRO_STATE 5 or 6 depending on if special dialouge was unlocked and VAR_WALMORE_TOWN_STATE 2
+//FLAG_SYS_POKEMON_GET will also need to be set for this event to take place
+
+//Scripts
+
 Script_JagowWay_StarterBattle:: 
 	lock
 	addobject 1
