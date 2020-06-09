@@ -3,7 +3,7 @@ WalmoreTownCenter_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	.byte 0
 
-WalmoreTown_PokemonCenter_1F_OnTransition: @ 81FC011
+WalmoreTown_PokemonCenter_1F_OnTransition:
 	setrespawn HEAL_LOCATION_WALMORE_TOWN
 	call Common_EventScript_UpdateBrineyLocation
 	end
@@ -17,15 +17,15 @@ WalmoreTown_PokemonCenter_1F_EventScript_Nurse::
 	release
 	end
 
-WalmoreTown_PokemonCenter_1F_EventScript_Gentleman:: @ 81FC028
+WalmoreTown_PokemonCenter_1F_EventScript_Gentleman::
 	msgbox WalmoreTown_PokemonCenter_1F_Text_TrainersCanUsePC, MSGBOX_NPC
 	end
 
-WalmoreTown_PokemonCenter_1F_EventScript_Boy:: @ 81FC031
+WalmoreTown_PokemonCenter_1F_EventScript_Boy::
 	msgbox WalmoreTown_PokemonCenter_1F_Text_PokemonCentersAreGreat, MSGBOX_NPC
 	end
 
-WalmoreTown_PokemonCenter_1F_EventScript_Girl:: @ 81FC03A
+WalmoreTown_PokemonCenter_1F_EventScript_Girl::
 	lock
 	faceplayer
 	goto_if_set FLAG_SYS_POKEDEX_GET, WalmoreTown_PokemonCenter_1F_EventScript_WirelessClubAvailable
@@ -33,7 +33,7 @@ WalmoreTown_PokemonCenter_1F_EventScript_Girl:: @ 81FC03A
 	release
 	end
 
-WalmoreTown_PokemonCenter_1F_EventScript_WirelessClubAvailable:: @ 81FC04F
+WalmoreTown_PokemonCenter_1F_EventScript_WirelessClubAvailable::
 	msgbox WalmoreTown_PokemonCenter_1F_Text_TradedInWirelessClub, MSGBOX_DEFAULT
 	release
 	end
