@@ -1,2 +1,231 @@
 WalmoreTownCenter_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, WalmoreTown_PokemonCenter_1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	.byte 0
+
+WalmoreTown_PokemonCenter_1F_OnTransition: @ 81FC011
+	setrespawn HEAL_LOCATION_WALMORE_TOWN
+	call Common_EventScript_UpdateBrineyLocation
+	end
+
+@ VAR_0x800B is the Nurse's object event id
+WalmoreTown_PokemonCenter_1F_EventScript_Nurse::
+	setvar VAR_0x800B, 1
+	call Common_EventScript_PkmnCenterNurse
+	waitmessage
+	waitbuttonpress
+	release
+	end
+
+WalmoreTown_PokemonCenter_1F_EventScript_Gentleman:: @ 81FC028
+	msgbox WalmoreTown_PokemonCenter_1F_Text_TrainersCanUsePC, MSGBOX_NPC
+	end
+
+WalmoreTown_PokemonCenter_1F_EventScript_Boy:: @ 81FC031
+	msgbox WalmoreTown_PokemonCenter_1F_Text_PokemonCentersAreGreat, MSGBOX_NPC
+	end
+
+WalmoreTown_PokemonCenter_1F_EventScript_Girl:: @ 81FC03A
+	lock
+	faceplayer
+	goto_if_set FLAG_SYS_POKEDEX_GET, WalmoreTown_PokemonCenter_1F_EventScript_WirelessClubAvailable
+	msgbox WalmoreTown_PokemonCenter_1F_Text_WirelessClubNotAvailable, MSGBOX_DEFAULT
+	release
+	end
+
+WalmoreTown_PokemonCenter_1F_EventScript_WirelessClubAvailable:: @ 81FC04F
+	msgbox WalmoreTown_PokemonCenter_1F_Text_TradedInWirelessClub, MSGBOX_DEFAULT
+	release
+	end
+	
+GivemonTest::
+lock
+msgbox T_TakeThesePokes, MSGBOX_NPC
+givemon SPECIES_FEEBAS, 5, ITEM_NONE
+givemon SPECIES_MILOTIC, 5, ITEM_NONE
+givemon SPECIES_MAGNEMITE, 5, ITEM_NONE
+givemon SPECIES_MAGNETON, 5, ITEM_NONE
+givemon SPECIES_MAGNEZONE, 5, ITEM_NONE
+givemon SPECIES_SNOVER, 5, ITEM_NONE
+givemon SPECIES_ABOMASNOW, 5, ITEM_NONE
+givemon SPECIES_SEEL, 5, ITEM_NONE
+givemon SPECIES_DEWGONG, 5, ITEM_NONE
+givemon SPECIES_FROSLASS, 5, ITEM_NONE
+givemon SPECIES_SHELLDER, 5, ITEM_NONE
+givemon SPECIES_CLOYSTER, 5, ITEM_NONE
+givemon SPECIES_GASTLY, 5, ITEM_NONE
+givemon SPECIES_HAUNTER, 5, ITEM_NONE
+givemon SPECIES_GENGAR, 5, ITEM_NONE
+givemon SPECIES_ONIX, 5, ITEM_NONE
+givemon SPECIES_DROWZEE, 5, ITEM_NONE
+givemon SPECIES_HYPNO, 5, ITEM_NONE
+givemon SPECIES_BUIZEL, 5, ITEM_NONE
+givemon SPECIES_FLOATZEL, 5, ITEM_NONE
+givemon SPECIES_VOLTORB, 5, ITEM_NONE
+givemon SPECIES_ELECTRODE, 5, ITEM_NONE
+givemon SPECIES_EXEGGCUTE, 5, ITEM_NONE
+givemon SPECIES_EXEGGUTOR, 5, ITEM_NONE
+givemon SPECIES_CUBONE, 5, ITEM_NONE
+givemon SPECIES_MAROWAK, 5, ITEM_NONE
+givemon SPECIES_HAWLUCHA, 5, ITEM_NONE
+givemon SPECIES_THROH, 5, ITEM_NONE
+givemon SPECIES_SAWK, 5, ITEM_NONE
+givemon SPECIES_KOFFING, 5, ITEM_NONE
+givemon SPECIES_WEEZING, 5, ITEM_NONE
+givemon SPECIES_RHYHORN, 5, ITEM_NONE
+givemon SPECIES_RHYDON, 5, ITEM_NONE
+givemon SPECIES_RHYPERIOR, 5, ITEM_NONE
+givemon SPECIES_CHANSEY, 5, ITEM_NONE
+givemon SPECIES_BLISSEY, 5, ITEM_NONE
+givemon SPECIES_HORSEA, 5, ITEM_NONE
+givemon SPECIES_SEADRA, 5, ITEM_NONE
+givemon SPECIES_KINGDRA, 5, ITEM_NONE
+givemon SPECIES_HERACROSS, 5, ITEM_NONE
+givemon SPECIES_STARYU, 5, ITEM_NONE
+givemon SPECIES_STARMIE, 5, ITEM_NONE
+givemon SPECIES_MR_MIME, 5, ITEM_NONE
+givemon SPECIES_SCYTHER, 5, ITEM_NONE
+givemon SPECIES_SCIZOR, 5, ITEM_NONE
+givemon SPECIES_ELECTABUZZ, 5, ITEM_NONE
+givemon SPECIES_ELECTIVIRE, 5, ITEM_NONE
+givemon SPECIES_KANGASKHAN, 5, ITEM_NONE
+givemon SPECIES_PINSIR, 5, ITEM_NONE
+givemon SPECIES_TAUROS, 5, ITEM_NONE
+givemon SPECIES_MAGIKARP, 5, ITEM_NONE
+givemon SPECIES_GYARADOS, 5, ITEM_NONE
+givemon SPECIES_LAPRAS, 5, ITEM_NONE
+givemon SPECIES_DITTO, 5, ITEM_NONE
+givemon SPECIES_EEVEE, 5, ITEM_NONE
+givemon SPECIES_VAPOREON, 5, ITEM_NONE
+givemon SPECIES_JOLTEON, 5, ITEM_NONE
+givemon SPECIES_FLAREON, 5, ITEM_NONE
+givemon SPECIES_ESPEON, 5, ITEM_NONE
+givemon SPECIES_UMBREON, 5, ITEM_NONE
+givemon SPECIES_GLACEON, 5, ITEM_NONE
+givemon SPECIES_LEAFEON, 5, ITEM_NONE
+givemon SPECIES_SYLVEON, 5, ITEM_NONE
+givemon SPECIES_LUCARIO, 5, ITEM_NONE
+givemon SPECIES_PUPITAR, 5, ITEM_NONE
+givemon SPECIES_LARVITAR, 5, ITEM_NONE
+givemon SPECIES_TYRANITAR, 5, ITEM_NONE
+givemon SPECIES_DRATINI, 5, ITEM_NONE
+givemon SPECIES_DRAGONAIR, 5, ITEM_NONE
+givemon SPECIES_DRAGONITE, 5, ITEM_NONE
+givemon SPECIES_PORYGON, 5, ITEM_NONE
+givemon SPECIES_PORYGON2, 5, ITEM_NONE
+givemon SPECIES_PORYGON_Z, 5, ITEM_NONE
+givemon SPECIES_KABUTO, 5, ITEM_NONE
+givemon SPECIES_KABUTOPS, 5, ITEM_NONE
+givemon SPECIES_AERODACTYL, 5, ITEM_NONE
+givemon SPECIES_SNORLAX, 5, ITEM_NONE
+givemon SPECIES_ARTICUNO, 5, ITEM_NONE
+givemon SPECIES_ZAPDOS, 5, ITEM_NONE
+givemon SPECIES_MOLTRES, 5, ITEM_NONE
+givemon SPECIES_MEWTWO, 5, ITEM_NONE
+givemon SPECIES_MEW, 5, ITEM_NONE
+givemon SPECIES_SNEASEL, 5, ITEM_NONE
+givemon SPECIES_WEAVILE, 5, ITEM_NONE
+givemon SPECIES_VOLCARONA, 5, ITEM_NONE
+givemon SPECIES_GENESECT, 5, ITEM_NONE
+givemon SPECIES_SNUBBULL, 5, ITEM_NONE
+givemon SPECIES_GRANBULL, 5, ITEM_NONE
+givemon SPECIES_JYNX, 5, ITEM_NONE
+givemon SPECIES_SKARMORY, 5, ITEM_NONE
+givemon SPECIES_SHROOMISH, 5, ITEM_NONE
+givemon SPECIES_BRELOOM, 5, ITEM_NONE
+givemon SPECIES_FLYGON, 5, ITEM_NONE
+givemon SPECIES_HELIOPTILE, 5, ITEM_NONE
+givemon SPECIES_HELIOLISK, 5, ITEM_NONE
+givemon SPECIES_HEATRAN, 5, ITEM_NONE
+givemon SPECIES_DARMANITAN, 5, ITEM_NONE
+givemon SPECIES_FLABEBE, 5, ITEM_NONE
+givemon SPECIES_FLOETTE, 5, ITEM_NONE
+givemon SPECIES_FLORGES, 5, ITEM_NONE
+givemon SPECIES_BAGON, 5, ITEM_NONE
+givemon SPECIES_SHELGON, 5, ITEM_NONE
+givemon SPECIES_SALAMENCE, 5, ITEM_NONE
+givemon SPECIES_STEELIX, 5, ITEM_NONE
+givemon SPECIES_BULBASAUR, 5, ITEM_NONE
+givemon SPECIES_IVYSAUR, 5, ITEM_NONE
+givemon SPECIES_VENUSAUR, 5, ITEM_NONE
+givemon SPECIES_GLIGAR, 5, ITEM_NONE
+givemon SPECIES_GLISCOR, 5, ITEM_NONE
+givemon SPECIES_LILEEP, 5, ITEM_NONE
+givemon SPECIES_CRADILY, 5, ITEM_NONE
+givemon SPECIES_MAREEP, 5, ITEM_NONE
+givemon SPECIES_FLAAFFY, 5, ITEM_NONE
+givemon SPECIES_AMPHAROS, 5, ITEM_NONE
+givemon SPECIES_STANTLER, 5, ITEM_NONE
+givemon SPECIES_RAIKOU, 5, ITEM_NONE
+givemon SPECIES_SUICUNE, 5, ITEM_NONE
+givemon SPECIES_ENTEI, 5, ITEM_NONE
+givemon SPECIES_SMEARGLE, 5, ITEM_NONE
+givemon SPECIES_TEDDIURSA, 5, ITEM_NONE
+givemon SPECIES_URSARING, 5, ITEM_NONE
+givemon SPECIES_METANG, 5, ITEM_NONE
+givemon SPECIES_METAGROSS, 5, ITEM_NONE
+givemon SPECIES_GIBLE, 5, ITEM_NONE
+givemon SPECIES_GABITE, 5, ITEM_NONE
+givemon SPECIES_GARCHOMP, 5, ITEM_NONE
+givemon SPECIES_BALTOY, 5, ITEM_NONE
+givemon SPECIES_CLAYDOL, 5, ITEM_NONE
+givemon SPECIES_FLETCHLING, 5, ITEM_NONE
+givemon SPECIES_FLETCHINDER, 5, ITEM_NONE
+givemon SPECIES_TALONFLAME, 5, ITEM_NONE
+givemon SPECIES_CELEBI, 5, ITEM_NONE
+givemon SPECIES_JIRACHI, 5, ITEM_NONE
+givemon SPECIES_CYNDAQUIL, 5, ITEM_NONE
+givemon SPECIES_QUILAVA, 5, ITEM_NONE
+givemon SPECIES_TYPHLOSION, 5, ITEM_NONE
+givemon SPECIES_NUMEL, 5, ITEM_NONE
+givemon SPECIES_CAMERUPT, 5, ITEM_NONE
+givemon SPECIES_TORKOAL, 5, ITEM_NONE
+givemon SPECIES_MACHOP, 5, ITEM_NONE
+givemon SPECIES_MACHOKE, 5, ITEM_NONE
+givemon SPECIES_MACHAMP, 5, ITEM_NONE
+givemon SPECIES_SPIRITOMB, 5, ITEM_NONE
+givemon SPECIES_VULLABY, 5, ITEM_NONE
+givemon SPECIES_MANDIBUZZ, 5, ITEM_NONE
+givemon SPECIES_DUSKULL, 5, ITEM_NONE
+givemon SPECIES_DUSCLOPS, 5, ITEM_NONE
+givemon SPECIES_AXEW, 5, ITEM_NONE
+givemon SPECIES_FRAXURE, 5, ITEM_NONE
+givemon SPECIES_HAXORUS, 5, ITEM_NONE
+givemon SPECIES_FERROSEED, 5, ITEM_NONE
+givemon SPECIES_FERROTHORN, 5, ITEM_NONE
+givemon SPECIES_HITMONLEE, 5, ITEM_NONE
+givemon SPECIES_HITMONCHAN, 5, ITEM_NONE
+givemon SPECIES_HITMONTOP, 5, ITEM_NONE
+givemon SPECIES_CHANDELURE, 5, ITEM_NONE
+givemon SPECIES_CRYOGONAL, 5, ITEM_NONE
+givemon SPECIES_HONCHKROW, 5, ITEM_NONE
+givemon SPECIES_VANILLITE, 5, ITEM_NONE
+givemon SPECIES_VANILLISH, 5, ITEM_NONE
+givemon SPECIES_VANILLUXE, 5, ITEM_NONE
+givemon SPECIES_LOTAD, 5, ITEM_NONE
+givemon SPECIES_LOMBRE, 5, ITEM_NONE
+givemon SPECIES_LUDICOLO, 5, ITEM_NONE
+release
+end
+
+WalmoreTown_PokemonCenter_1F_Text_TrainersCanUsePC: @ 81FC059
+	.string "That PC in the corner there is\n"
+	.string "for any Pokémon Trainer to use.\p"
+	.string "Naturally, that means you're welcome\n"
+	.string "to use it, too.$"
+
+WalmoreTown_PokemonCenter_1F_Text_PokemonCentersAreGreat: @ 81FC0CD
+	.string "Pokémon Centers are great!\p"
+	.string "You can use their services as much\n"
+	.string "as you like, and it's all for free.\l"
+	.string "You never have to worry!$"
+
+WalmoreTown_PokemonCenter_1F_Text_WirelessClubNotAvailable: @ 81FC148
+	.string "I wonder what is happening on Jagow \nWay.$"
+	
+
+WalmoreTown_PokemonCenter_1F_Text_TradedInWirelessClub: @ 81FC1B9
+	.string "Jagow Way looks clear now. I would \ntake some Antidotes if I was going \linto Jagow Woods. \pIt's crawling with Bug Pokémon.$"
+	
+T_TakeThesePokes:
+	.string "Here take these.$"

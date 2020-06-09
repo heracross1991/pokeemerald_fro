@@ -497,6 +497,7 @@ msgbox T_TilyousLab_RecievedPokedex
 waitfanfare
 msgbox T_TilyousLab_ExplainPokedex
 setflag FLAG_SYS_POKEDEX_GET
+setflag FLAG_ADVENTURE_STARTED
 removeitem ITEM_TILYOUS_PARCEL, 1
 closemessage
 release
