@@ -1,7 +1,8 @@
 LakeMeadVillage_FrosHouse_1F_MapScripts::
 	
 	map_script MAP_SCRIPT_ON_LOAD, LakeMeadVillage_FrosHouse_1F_OnLoad
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, LakeMeadVillage_FrosHouse_1F_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LakeMeadVillage_FrosHouse_1F_OnFrame	
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LakeMeadVillage_FrosHouse_1F_OnWarp	
 	.byte 0
 
 //NEW GAME SEQUENCE STARTS HERE
@@ -121,10 +122,17 @@ LakeMeadVillage_FrosHouse_1F_MoveMom:
 	setflag FLAG_HIDE_MOM
 	end
 
+LakeMead_FrosHouse_1F_SetFroNorth:
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	end
 
 LakeMeadVillage_FrosHouse_1F_OnFrame:
 	map_script_2 VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 4, LakeMeadVillage_FrosHouse_1F_IsiahWasJustHere
 	map_script_2 VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 0, LakeMead_FrosHouse_1F_SetFroFacingTV
+	.2byte 0
+
+LakeMeadVillage_FrosHouse_1F_OnWarp:
+	map_script_2 VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 0, LakeMead_FrosHouse_1F_SetFroNorth
 	.2byte 0
 
 //Angelina NPC Script
@@ -178,8 +186,16 @@ LakeMeadVillage_FrosHouse_1F_Mom_NPC::
 	faceplayer
 	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 2
 	goto_if_eq Script_LakeMeadVillage_FrosHouse_1F_GoDownstairsStandard
+	compare VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 4
+	goto_if_ge Script_LakeMeadVillage_FrosHouse_1F_MomAfterRecievedPoke
+	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 5
+	goto_if_eq Script_LakeMeadVillage_FrosHouse_IsiahLookingForYou
 	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 3
 	goto_if_ge Script_LakeMeadVillage_FrosHouse_1F_MomRandom1
+	end
+
+Script_LakeMeadVillage_FrosHouse_IsiahLookingForYou:
+	msgbox T_FrosHouse1F_IsiahWasJustHere, MSGBOX_NPC
 	end
 
 Script_LakeMeadVillage_FrosHouse_1F_GoDownstairsStandard::
@@ -193,6 +209,10 @@ Script_LakeMeadVillage_FrosHouse_1F_MomRandom1::
 	case 0, Script_LakeMeadVillage_FrosHouse_1F_MomRandomText1
 	case 1, Script_LakeMeadVillage_FrosHouse_1F_MomRandomText2
 	case 2, Script_LakeMeadVillage_FrosHouse_1F_MomRandomText3
+	end
+
+Script_LakeMeadVillage_FrosHouse_1F_MomAfterRecievedPoke::
+	msgbox T_FrosHouse1F_YouFoundTheProfessor, MSGBOX_NPC
 	end
 
 Script_LakeMeadVillage_FrosHouse_1F_MomRandomText1::
@@ -395,3 +415,6 @@ Text_LakeMeadVillageFros_1F_TV2:
 	
 T_FrosHouse1F_IsiahWasJustHere:
 	.string "Mom: Isiah was just here. He said \nhe left something in your room. \pHe was down there for a while \nlooking for it...$"
+	
+T_FrosHouse1F_YouFoundTheProfessor:
+	.string "Mom: Oh you found the Professor? \nAnd he gave you your Pokémon? \pThat's great! Safe travels then, \nand good luck!$"

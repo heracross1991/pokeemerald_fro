@@ -4485,11 +4485,31 @@
       "id": "LAYOUT_WALMORE_TOWN",
       "name": "WalmoreTown_Layout",
       "width": 40,
-      "height": 20,
+      "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/WalmoreTown/border.bin",
       "blockdata_filepath": "data/layouts/WalmoreTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALMORE_TOWN_MART",
+      "name": "WalmoreTownMart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/WalmoreTownMart/border.bin",
+      "blockdata_filepath": "data/layouts/WalmoreTownMart/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALMORE_TOWN_CENTER",
+      "name": "WalmoreTownCenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/WalmoreTownCenter/border.bin",
+      "blockdata_filepath": "data/layouts/WalmoreTownCenter/map.bin"
     }
   ]
 }
