@@ -3004,10 +3004,10 @@
     {
       "id": "LAYOUT_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE",
       "name": "Route124_DivingTreasureHuntersHouse_Layout",
-      "width": 10,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
+      "width": 50,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Route124_DivingTreasureHuntersHouse/border.bin",
       "blockdata_filepath": "data/layouts/Route124_DivingTreasureHuntersHouse/map.bin"
     },
