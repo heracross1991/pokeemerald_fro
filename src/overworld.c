@@ -2143,6 +2143,8 @@ static void sub_8086988(u32 a1)
     ResetCameraUpdateInfo();
     InstallCameraPanAheadCallback();
 	FreeAllSpritePalettes();
+    
+
     FieldEffectActiveListClear();
     StartWeather();
     ResumePausedWeather();
