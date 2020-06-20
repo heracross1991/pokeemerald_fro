@@ -557,25 +557,3 @@ gMetatiles_UnionRoom:: @ 83DF392
 	.align 1
 gMetatileAttributes_UnionRoom:: @ 83DF6A2
 	.incbin "data/tilesets/secondary/union_room/metatile_attributes.bin"
-
-	.align 1
-gMetatiles_Gratwick_Peaks::
-	.incbin "data/tilesets/secondary/gratwick_peaks/metatiles.bin"
-
-	.align 1
-gMetatileAttributes_Gratwick_Peaks::
-	.incbin "data/tilesets/secondary/gratwick_peaks/metatile_attributes.bin"
-	.align 1
-gMetatiles_MOTHEREFFINGTEST::
-	.incbin "data/tilesets/secondary/mothereffingtest/metatiles.bin"
-
-	.align 1
-gMetatileAttributes_MOTHEREFFINGTEST::
-	.incbin "data/tilesets/secondary/mothereffingtest/metatile_attributes.bin"
-	.align 1
-gMetatiles_MFINGTEST2PRI::
-	.incbin "data/tilesets/primary/mfingtest2pri/metatiles.bin"
-
-	.align 1
-gMetatileAttributes_MFINGTEST2PRI::
-	.incbin "data/tilesets/primary/mfingtest2pri/metatile_attributes.bin"

@@ -8,25 +8,6 @@ JagowWay_MapScripts::
 
 //Scripts
 
-WildBattlesTest::
-	checkflag FLAG_UNUSED_0x021
-	vgoto_if 1, Route117_ActivatedFlag
-	setflag FLAG_UNUSED_0x021
-	msgbox Route117_Text_FlagActivated, MSGBOX_NPC
-	end
-
-Route117_ActivatedFlag::
-	clearflag FLAG_UNUSED_0x021
-	msgbox Route117_Text_FlagDeactivated, MSGBOX_NPC
-	end
-
-Route117_Text_FlagActivated: 
-	.string "Wild encounter activated$"
-	
-Route117_Text_FlagDeactivated: 
-	.string "Wild encounter deactivated$"
-
-
 Script_JagowWay_StarterBattle:: 
 	lock
 	addobject 1

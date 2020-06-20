@@ -830,35 +830,3 @@ gTileset_UnionRoom:: @ 83DFDFC
 	.4byte gMetatiles_UnionRoom
 	.4byte gMetatileAttributes_UnionRoom
 	.4byte NULL @ animation callback
-	.align 2
-gTileset_Gratwick_Peaks::
-	.byte TRUE @ is compressed
-	.byte TRUE @ is secondary
-	.2byte 0
-	.4byte gTilesetTiles_Gratwick_Peaks
-	.4byte gTilesetPalettes_Gratwick_Peaks
-	.4byte gMetatiles_Gratwick_Peaks
-	.4byte gMetatileAttributes_Gratwick_Peaks
-	.4byte NULL
-
-	.align 2
-gTileset_MOTHEREFFINGTEST::
-	.byte TRUE @ is compressed
-	.byte TRUE @ is secondary
-	.2byte 0
-	.4byte gTilesetTiles_MOTHEREFFINGTEST
-	.4byte gTilesetPalettes_MOTHEREFFINGTEST
-	.4byte gMetatiles_MOTHEREFFINGTEST
-	.4byte gMetatileAttributes_MOTHEREFFINGTEST
-	.4byte NULL
-
-	.align 2
-gTileset_MFINGTEST2PRI::
-	.byte TRUE @ is compressed
-	.byte FALSE @ is secondary
-	.2byte 0
-	.4byte gTilesetTiles_MFINGTEST2PRI
-	.4byte gTilesetPalettes_MFINGTEST2PRI
-	.4byte gMetatiles_MFINGTEST2PRI
-	.4byte gMetatileAttributes_MFINGTEST2PRI
-	.4byte NULL
