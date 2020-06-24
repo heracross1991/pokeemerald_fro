@@ -532,6 +532,7 @@ struct BattleStruct
     bool8 throwingPokeBall;
     struct MegaEvolutionData mega;
     const u8 *trainerSlideMsg;
+    bool8 trainerSlideHighHpMsgDone;
     bool8 trainerSlideLowHpMsgDone;
     u8 introState;
     u8 ateBerry[2]; // array id determined by side, each party pokemon as bit

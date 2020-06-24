@@ -3449,7 +3449,12 @@ static void DoBattleIntro(void)
         }
         (*state)++;
         break;
-    case 20: // set dex and battle vars
+    //case 20: 
+			//gBattlescriptCurrInstr = VARIOUS_TRAINER_SLIDE_MSG_TUTORIAL;
+		//(*state)++;
+		//break; 
+		
+	case 20: // set dex and battle vars
         if (!gBattleControllerExecFlags)
         {
             for (gActiveBattler = 0; gActiveBattler < gBattlersCount; gActiveBattler++)
@@ -3643,6 +3648,8 @@ void BattleTurnPassed(void)
     else if (gBattleTypeFlags & BATTLE_TYPE_ARENA && gBattleStruct->arenaTurnCounter == 0)
         BattleScriptExecute(BattleScript_ArenaTurnBeginning);
     else if (ShouldDoTrainerSlide(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), gTrainerBattleOpponent_A, TRAINER_SLIDE_LAST_LOW_HP))
+        BattleScriptExecute(BattleScript_TrainerSlideMsgEnd2);
+    else if (ShouldDoTrainerSlide(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), gTrainerBattleOpponent_A, TRAINER_SLIDE_HIGH_HP))
         BattleScriptExecute(BattleScript_TrainerSlideMsgEnd2);
 }
 

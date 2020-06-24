@@ -7987,6 +7987,7 @@ static void Cmd_various(void)
             PREPARE_TYPE_BUFFER(gBattleTextBuff1, gBattleMoves[gCurrentMove].argument);
             gBattlescriptCurrInstr += 7;
         }
+
         return;
     }
 

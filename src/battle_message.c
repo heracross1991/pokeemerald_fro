@@ -669,6 +669,8 @@ static const u8 sText_ReceiverAbilityTakeOver[] = _("{B_SCR_ACTIVE_NAME_WITH_PRE
 static const u8 sText_PkmnAbsorbingPower[] = _("{B_ATK_NAME_WITH_PREFIX} is absorbing power!");
 static const u8 sText_NoOneWillBeAbleToRun[] = _("No one will be able to run away\nduring the next turn!");
 static const u8 sText_DestinyKnotActivates[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} fell in love\nfrom the {B_LAST_ITEM}!");
+static const u8 sText_TutorialText[] =_("John: In a Pokémon battle, you want \nto try to attack your opponents \lPokémon and get it's HP to 0. \pFro: Wow sounds complicated. \pJohn: Let me finish. An attacking \nmove can either be Physical or \lSpecial, and their power directly \lcorresponds to your Pokemon's \lAttack and Special Attack stats! \pYou can also use non attacking \nmoves to raise your stats, or lower \lyour opponents! \pFro: Can we just get this over \nwith?");
+
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1207,6 +1209,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_GRASSYTERRAINHEALS - 12] = sText_GrassyTerrainHeals,
     [STRINGID_ELECTRICTERRAINPREVENTS - 12] = sText_ElectricTerrainPreventsSleep,
     [STRINGID_PSYCHICTERRAINPREVENTS - 12] = sText_PsychicTerrainPreventsPriority,
+	[STRINGID_TUTORIALTEXT - 12] = sText_TutorialText,
 };
 
 const u16 gTerrainStringIds[] =
@@ -3561,13 +3564,15 @@ struct TrainerSlide
 {
     u16 trainerId;
     const u8 *msgLastSwitchIn;
-    const u8 *msgLastLowHp;
+    const u8 *msgHighHP;
     const u8 *msgFirstDown;
+    const u8 *msgLastLowHp;
+	
 };
 
 static const struct TrainerSlide sTrainerSlides[] =
 {
-	{TRAINER_JOHN_JAGOW_WAY_MUDKIP, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
+	{TRAINER_JOHN_JAGOW_WAY_MUDKIP, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing,sText_KindOffer},
 	{TRAINER_JOHN_JAGOW_WAY_TREECKO, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
 	{TRAINER_JOHN_JAGOW_WAY_TORCHIC, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
 };
@@ -3595,6 +3600,14 @@ static bool32 IsBattlerHpLow(u32 battler)
     else
         return FALSE;
 }
+static bool32 IsBattlerHpHigh(u32 battler)
+{
+    if ((gBattleMons[battler].hp * 100) / gBattleMons[battler].maxHP > 25)
+        return TRUE;
+    else
+        return FALSE;
+}
+
 
 bool32 ShouldDoTrainerSlide(u32 battlerId, u32 trainerId, u32 which)
 {
@@ -3617,14 +3630,13 @@ bool32 ShouldDoTrainerSlide(u32 battlerId, u32 trainerId, u32 which)
                     return TRUE;
                 }
                 break;
-            case TRAINER_SLIDE_LAST_LOW_HP:
-                if (sTrainerSlides[i].msgLastLowHp != NULL
-                    && GetEnemyMonCount(TRUE) == 1
-                    && IsBattlerHpLow(battlerId)
-                    && !gBattleStruct->trainerSlideLowHpMsgDone)
+            case TRAINER_SLIDE_HIGH_HP:
+                if (sTrainerSlides[i].msgHighHP != NULL
+                    && IsBattlerHpHigh(battlerId)
+                    && !gBattleStruct->trainerSlideHighHpMsgDone)
                 {
-                    gBattleStruct->trainerSlideLowHpMsgDone = TRUE;
-                    gBattleStruct->trainerSlideMsg = sTrainerSlides[i].msgLastLowHp;
+                    gBattleStruct->trainerSlideHighHpMsgDone = TRUE;
+                    gBattleStruct->trainerSlideMsg = sTrainerSlides[i].msgHighHP;
                     return TRUE;
                 }
                 break;
@@ -3635,6 +3647,15 @@ bool32 ShouldDoTrainerSlide(u32 battlerId, u32 trainerId, u32 which)
                     return TRUE;
                 }
                 break;
+			case TRAINER_SLIDE_LAST_LOW_HP:
+                if (sTrainerSlides[i].msgLastLowHp != NULL
+                    && IsBattlerHpLow(battlerId)
+                    && !gBattleStruct->trainerSlideLowHpMsgDone)
+                {
+                    gBattleStruct->trainerSlideLowHpMsgDone = TRUE;
+                    gBattleStruct->trainerSlideMsg = sTrainerSlides[i].msgLastLowHp;
+                    return TRUE;
+                }
             }
             break;
         }

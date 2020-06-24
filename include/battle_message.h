@@ -220,8 +220,9 @@ struct BattleMsgData
 enum
 {
     TRAINER_SLIDE_LAST_SWITCHIN,
-    TRAINER_SLIDE_LAST_LOW_HP,
+    TRAINER_SLIDE_HIGH_HP,
     TRAINER_SLIDE_FIRST_DOWN,
+    TRAINER_SLIDE_LAST_LOW_HP
 };
 
 void BufferStringBattle(u16 stringID);
