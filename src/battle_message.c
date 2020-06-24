@@ -3563,6 +3563,7 @@ u8 GetCurrentPpToMaxPpState(u8 currentPp, u8 maxPp)
 struct TrainerSlide
 {
     u16 trainerId;
+    const u8 *msgFirstTurn;
     const u8 *msgLastSwitchIn;
     const u8 *msgHighHP;
     const u8 *msgFirstDown;
@@ -3572,9 +3573,9 @@ struct TrainerSlide
 
 static const struct TrainerSlide sTrainerSlides[] =
 {
-	{TRAINER_JOHN_JAGOW_WAY_MUDKIP, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing,sText_KindOffer},
-	{TRAINER_JOHN_JAGOW_WAY_TREECKO, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
-	{TRAINER_JOHN_JAGOW_WAY_TORCHIC, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
+	{TRAINER_JOHN_JAGOW_WAY_MUDKIP, sText_UseNextPkmn, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing,sText_KindOffer},
+	{TRAINER_JOHN_JAGOW_WAY_TREECKO, sText_UseNextPkmn, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
+	{TRAINER_JOHN_JAGOW_WAY_TORCHIC, sText_UseNextPkmn, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
 };
 
 static u32 GetEnemyMonCount(bool32 onlyAlive)
@@ -3607,6 +3608,13 @@ static bool32 IsBattlerHpHigh(u32 battler)
     else
         return FALSE;
 }
+static bool32 IsFirstTurn()
+{
+    if (gBattleResults.battleTurnCounter == 0)
+        return TRUE;
+    else
+        return FALSE;
+}
 
 
 bool32 ShouldDoTrainerSlide(u32 battlerId, u32 trainerId, u32 which)
@@ -3623,6 +3631,13 @@ bool32 ShouldDoTrainerSlide(u32 battlerId, u32 trainerId, u32 which)
             gBattleScripting.battler = battlerId;
             switch (which)
             {
+            case TRAINER_SLIDE_FIRST_TURN:
+                if (sTrainerSlides[i].msgFirstTurn != NULL && IsFirstTurn(TRUE))
+                {
+                    gBattleStruct->trainerSlideMsg = sTrainerSlides[i].msgFirstTurn;
+                    return TRUE;
+                }
+                break;
             case TRAINER_SLIDE_LAST_SWITCHIN:
                 if (sTrainerSlides[i].msgLastSwitchIn != NULL && GetEnemyMonCount(TRUE) == 1)
                 {

@@ -3449,10 +3449,6 @@ static void DoBattleIntro(void)
         }
         (*state)++;
         break;
-    //case 20: 
-			//gBattlescriptCurrInstr = VARIOUS_TRAINER_SLIDE_MSG_TUTORIAL;
-		//(*state)++;
-		//break; 
 		
 	case 20: // set dex and battle vars
         if (!gBattleControllerExecFlags)
@@ -3477,6 +3473,7 @@ static void DoBattleIntro(void)
             gBattleMainFunc = TryDoEventsBeforeFirstTurn;
         }
         break;
+   
     }
 }
 
@@ -3500,6 +3497,7 @@ static void TryDoEventsBeforeFirstTurn(void)
             }
         }
     }
+    
     if (!gBattleStruct->overworldWeatherDone
         && AbilityBattleEffects(0, 0, 0, ABILITYEFFECT_SWITCH_IN_WEATHER, 0) != 0)
     {
@@ -3557,6 +3555,10 @@ static void TryDoEventsBeforeFirstTurn(void)
     {
         StopCryAndClearCrySongs();
         BattleScriptExecute(BattleScript_ArenaTurnBeginning);
+    }
+    else if (ShouldDoTrainerSlide(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), gTrainerBattleOpponent_A, TRAINER_SLIDE_FIRST_TURN))
+    {
+        BattleScriptExecute(BattleScript_TrainerSlideMsgEnd2);
     }
 }
 
