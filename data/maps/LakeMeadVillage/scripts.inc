@@ -263,6 +263,7 @@ walk_down
 walk_left
 walk_left
 walk_left
+walk_left
 face_up
 step_end
 
@@ -279,6 +280,7 @@ walk_down
 walk_down
 walk_down
 walk_down
+walk_left
 walk_left
 walk_left
 step_end
@@ -308,6 +310,7 @@ walk_down
 walk_left
 walk_left
 walk_left
+walk_left
 face_up
 step_end
 
@@ -323,6 +326,7 @@ walk_down
 walk_down
 walk_down
 walk_down
+walk_left
 walk_left
 walk_left
 step_end

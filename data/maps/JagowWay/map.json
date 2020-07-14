@@ -15,13 +15,18 @@
   "connections": [
     {
       "direction": "left",
-      "offset": 0,
+      "offset": -2,
       "map": "MAP_LAKE_MEAD_VILLAGE"
     },
     {
       "direction": "right",
-      "offset": 58,
+      "offset": 37,
       "map": "MAP_WALMORE_TOWN"
+    },
+    {
+      "direction": "up",
+      "offset": -60,
+      "map": "MAP_LAKE_MEAD"
     }
   ],
   "object_events": [
@@ -37,23 +42,30 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
-      "x": 14,
-      "y": 8,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "WildBattlesTest",
-      "flag": "0"
     }
   ],
   "warp_events": [
-
+    {
+      "x": 13,
+      "y": 83,
+      "elevation": 0,
+      "dest_map": "MAP_JAGOW_WOODS",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 14,
+      "y": 83,
+      "elevation": 0,
+      "dest_map": "MAP_JAGOW_WOODS",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 15,
+      "y": 83,
+      "elevation": 0,
+      "dest_map": "MAP_JAGOW_WOODS",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
     {

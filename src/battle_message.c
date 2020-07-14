@@ -1687,7 +1687,7 @@ static const u8 sText_Opposing1[] = _("The opposing");
 static const u8 sText_Your2[] = _("your");
 static const u8 sText_Opposing2[] = _("the opposing");
 
-static const u8 sText_JohnBattleBeing[] = _("John: In a Pokémon battle, you want \nto try to attack your opponents \lPokémon and get it's HP to 0. \pFro: Wow sounds complicated. \pJohn: Let me finish. An attacking \nmove can either be Physical or \lSpecial, and their power directly \lcorresponds to your Pokemon's \lAttack and Special Attack stats! \pYou can also use non attacking \nmoves to raise your stats, or lower \lyour opponents! \pFro: Can we just get this over \nwith?");
+static const u8 sText_JohnBattleStart[] = _("John: In a Pokémon battle, you want \nto try to attack your opponents \lPokémon and get it's HP to 0. \pFro: Wow sounds complicated. \pJohn: Let me finish. An attacking \nmove can either be Physical or \lSpecial, and their power directly \lcorresponds to your Pokemon's \lAttack and Special Attack stats! \pYou can also use non attacking \nmoves to raise your stats, or lower \lyour opponents! \pFro: Can we just get this over \nwith?");
 
 // This is four lists of moves which use a different attack string in Japanese
 // to the default. See the documentation for ChooseTypeOfMoveUsedString for more detail.
@@ -3573,9 +3573,9 @@ struct TrainerSlide
 
 static const struct TrainerSlide sTrainerSlides[] =
 {
-	{TRAINER_JOHN_JAGOW_WAY_MUDKIP, sText_UseNextPkmn, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing,sText_KindOffer},
-	{TRAINER_JOHN_JAGOW_WAY_TREECKO, sText_UseNextPkmn, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
-	{TRAINER_JOHN_JAGOW_WAY_TORCHIC, sText_UseNextPkmn, sText_JohnBattleBeing, sText_JohnBattleBeing, sText_JohnBattleBeing},
+	{TRAINER_JOHN_JAGOW_WAY_MUDKIP, sText_JohnBattleStart, NULL, NULL, NULL, NULL},
+	{TRAINER_JOHN_JAGOW_WAY_TREECKO, sText_JohnBattleStart, NULL, NULL, NULL, NULL},
+	{TRAINER_JOHN_JAGOW_WAY_TORCHIC, sText_JohnBattleStart, NULL, NULL, NULL, NULL},
 };
 
 static u32 GetEnemyMonCount(bool32 onlyAlive)

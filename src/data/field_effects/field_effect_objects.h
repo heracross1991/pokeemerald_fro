@@ -38,20 +38,20 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_ShadowLarge = {0xFFFF, 0x
 const struct SpriteTemplate gFieldEffectObjectTemplate_ShadowExtraLarge = {0xFFFF, 0xFFFF, &gObjectEventBaseOam_64x32, gFieldEffectObjectImageAnimTable_Shadow, gFieldEffectObjectPicTable_ShadowExtraLarge, gDummySpriteAffineAnimTable, UpdateShadowFieldEffect};
 
 const struct SpriteFrameImage gFieldEffectObjectPicTable_TallGrass[] = {
-    overworld_frame(gFieldEffectObjectPic_TallGrass, 2, 2, 0),
-    overworld_frame(gFieldEffectObjectPic_TallGrass, 2, 2, 1),
     overworld_frame(gFieldEffectObjectPic_TallGrass, 2, 2, 2),
-    overworld_frame(gFieldEffectObjectPic_TallGrass, 2, 2, 3),
-    overworld_frame(gFieldEffectObjectPic_TallGrass, 2, 2, 4),
+    overworld_frame(gFieldEffectObjectPic_TallGrass, 2, 2, 2),
+    overworld_frame(gFieldEffectObjectPic_TallGrass, 2, 2, 2),
+    overworld_frame(gFieldEffectObjectPic_TallGrass, 2, 2, 2),
+    overworld_frame(gFieldEffectObjectPic_TallGrass, 2, 2, 2),
 };
 
 const union AnimCmd gFieldEffectObjectImageAnim_850CA84[] =
 {
-    ANIMCMD_FRAME(1, 10),
-    ANIMCMD_FRAME(2, 10),
-    ANIMCMD_FRAME(3, 10),
-    ANIMCMD_FRAME(4, 10),
-    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_FRAME(2, 2),
+    ANIMCMD_FRAME(2, 2),
+    ANIMCMD_FRAME(2, 2),
+    ANIMCMD_FRAME(2, 2),
+    ANIMCMD_FRAME(2, 2),
     ANIMCMD_END,
 };
 

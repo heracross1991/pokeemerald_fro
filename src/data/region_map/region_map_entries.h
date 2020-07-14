@@ -201,6 +201,8 @@ static const u8 sMapName_TrainerHill[] = _("TRAINER HILL");
 static const u8 sMapName_LakeMeadVillage[] =_("Lake Mead Village");
 static const u8 sMapName_JagowWay[] =_("Jagow Way");
 static const u8 sMapName_WalmoreTown[] =_("Walmore Town");
+static const u8 sMapName_JagowWoods[] =_("Jagow Woods");
+static const u8 sMapName_LakeMead[] =_("Lake Mead");
 
 const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_LITTLEROOT_TOWN]           = { 4, 11, 1, 1, sMapName_LittlerootTown},
@@ -418,7 +420,9 @@ const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_TRAINER_HILL]              = { 8,  4, 1, 1, sMapName_TrainerHill},
 	[MAPSEC_LAKE_MEAD_VILLAGE]		   = { 4, 12, 1, 1, sMapName_LakeMeadVillage},
 	[MAPSEC_JAGOW_WAY]		   		   = { 4, 12, 1, 1, sMapName_JagowWay},
-    [MAPSEC_WALMORE_TOWN]		   	   = { 4, 12, 1, 1, sMapName_WalmoreTown}
+    [MAPSEC_WALMORE_TOWN]		   	   = { 4, 12, 1, 1, sMapName_WalmoreTown},
+    [MAPSEC_JAGOW_WOODS]		   	   = { 4, 12, 1, 1, sMapName_JagowWoods},
+    [MAPSEC_LAKE_MEAD]                 = { 4, 12, 1, 1, sMapName_LakeMead},
 };
 
 #endif //GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H

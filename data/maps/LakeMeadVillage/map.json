@@ -15,15 +15,20 @@
   "connections": [
     {
       "direction": "right",
-      "offset": 0,
+      "offset": 2,
       "map": "MAP_JAGOW_WAY"
+    },
+    {
+      "direction": "up",
+      "offset": -30,
+      "map": "MAP_LAKE_MEAD"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
-      "x": 9,
-      "y": 5,
+      "x": 17,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -35,8 +40,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
-      "x": 12,
-      "y": 9,
+      "x": 20,
+      "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -48,8 +53,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_1",
-      "x": 6,
-      "y": 18,
+      "x": 14,
+      "y": 20,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 0,
@@ -61,8 +66,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 2,
-      "y": 11,
+      "x": 10,
+      "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_RIGHT_AND_LEFT",
       "movement_range_x": 0,
@@ -75,39 +80,32 @@
   ],
   "warp_events": [
     {
-      "x": 3,
-      "y": 7,
+      "x": 11,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_LAKE_MEAD_VILLAGE_FROS_HOUSE_1F",
       "dest_warp_id": 1
     },
     {
-      "x": 15,
-      "y": 7,
+      "x": 22,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_LAKE_MEAD_VILLAGE_NALLS_RESIDENCE_1F",
       "dest_warp_id": 1
     },
     {
-      "x": 15,
-      "y": 16,
+      "x": 22,
+      "y": 18,
       "elevation": 0,
       "dest_map": "MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB",
-      "dest_warp_id": 0
-    },
-    {
-      "x": 7,
-      "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_LAKE_MEAD_VILLAGE",
       "dest_warp_id": 0
     }
   ],
   "coord_events": [
     {
       "type": "trigger",
-      "x": 21,
-      "y": 8,
+      "x": 29,
+      "y": 10,
       "elevation": 0,
       "var": "VAR_LAKE_MEAD_VILLAGE_TOWN_STATE",
       "var_value": "1",
@@ -115,8 +113,8 @@
     },
     {
       "type": "trigger",
-      "x": 21,
-      "y": 9,
+      "x": 29,
+      "y": 11,
       "elevation": 0,
       "var": "VAR_LAKE_MEAD_VILLAGE_TOWN_STATE",
       "var_value": "1",
@@ -124,8 +122,8 @@
     },
     {
       "type": "trigger",
-      "x": 20,
-      "y": 8,
+      "x": 28,
+      "y": 10,
       "elevation": 0,
       "var": "VAR_LAKE_MEAD_VILLAGE_TOWN_STATE",
       "var_value": "0",
@@ -133,8 +131,8 @@
     },
     {
       "type": "trigger",
-      "x": 20,
-      "y": 9,
+      "x": 28,
+      "y": 11,
       "elevation": 0,
       "var": "VAR_LAKE_MEAD_VILLAGE_TOWN_STATE",
       "var_value": "0",
@@ -144,23 +142,23 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 7,
-      "y": 7,
+      "x": 16,
+      "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Script_LakeMeadVillage_FerlitoHouseholdSign"
     },
     {
       "type": "sign",
-      "x": 11,
-      "y": 7,
+      "x": 19,
+      "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Script_LakeMeadVillage_NallsResidenceSign"
     },
     {
       "type": "sign",
-      "x": 14,
+      "x": 18,
       "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

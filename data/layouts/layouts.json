@@ -4434,8 +4434,8 @@
     {
       "id": "LAYOUT_LAKE_MEAD_VILLAGE",
       "name": "LakeMeadVillage_Layout",
-      "width": 22,
-      "height": 20,
+      "width": 30,
+      "height": 32,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/LakeMeadVillage/border.bin",
@@ -4484,10 +4484,10 @@
     {
       "id": "LAYOUT_WALMORE_TOWN",
       "name": "WalmoreTown_Layout",
-      "width": 40,
-      "height": 24,
+      "width": 44,
+      "height": 51,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/WalmoreTown/border.bin",
       "blockdata_filepath": "data/layouts/WalmoreTown/map.bin"
     },
@@ -4510,6 +4510,26 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/WalmoreTownCenter/border.bin",
       "blockdata_filepath": "data/layouts/WalmoreTownCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_JAGOW_WOODS",
+      "name": "JagowWoods_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/JagowWoods/border.bin",
+      "blockdata_filepath": "data/layouts/JagowWoods/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAKE_MEAD",
+      "name": "LakeMead_Layout",
+      "width": 73,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/LakeMead/border.bin",
+      "blockdata_filepath": "data/layouts/LakeMead/map.bin"
     }
   ]
 }
