@@ -862,3 +862,14 @@ gTileset_MFINGTEST2PRI::
 	.4byte gMetatiles_MFINGTEST2PRI
 	.4byte gMetatileAttributes_MFINGTEST2PRI
 	.4byte NULL
+
+	.align 2
+gTileset_Test::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Test
+	.4byte gTilesetPalettes_Test
+	.4byte gMetatiles_Test
+	.4byte gMetatileAttributes_Test
+	.4byte NULL

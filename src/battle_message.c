@@ -3603,7 +3603,7 @@ static bool32 IsBattlerHpLow(u32 battler)
 }
 static bool32 IsBattlerHpHigh(u32 battler)
 {
-    if ((gBattleMons[battler].hp * 100) / gBattleMons[battler].maxHP > 25)
+    if ((gBattleMons[battler].hp * 100) / gBattleMons[battler].maxHP > 75)
         return TRUE;
     else
         return FALSE;

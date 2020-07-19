@@ -1789,3 +1789,23 @@ gTilesetPalettes_MFINGTEST2PRI::
 	.align 2
 gTilesetTiles_MFINGTEST2PRI::
 	.incbin "data/tilesets/primary/mfingtest2pri/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_Test::
+	.incbin "data/tilesets/secondary/test/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/test/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/test/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/test/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/test/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/test/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/test/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/test/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/test/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/test/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/test/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/test/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/test/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_Test::
+	.incbin "data/tilesets/secondary/test/tiles.4bpp.lz"

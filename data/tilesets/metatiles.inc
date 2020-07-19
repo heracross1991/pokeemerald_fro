@@ -579,3 +579,10 @@ gMetatiles_MFINGTEST2PRI::
 	.align 1
 gMetatileAttributes_MFINGTEST2PRI::
 	.incbin "data/tilesets/primary/mfingtest2pri/metatile_attributes.bin"
+	.align 1
+gMetatiles_Test::
+	.incbin "data/tilesets/secondary/test/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_Test::
+	.incbin "data/tilesets/secondary/test/metatile_attributes.bin"
