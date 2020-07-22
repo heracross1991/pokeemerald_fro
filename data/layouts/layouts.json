@@ -4435,7 +4435,7 @@
       "id": "LAYOUT_LAKE_MEAD_VILLAGE",
       "name": "LakeMeadVillage_Layout",
       "width": 30,
-      "height": 32,
+      "height": 36,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/LakeMeadVillage/border.bin",
