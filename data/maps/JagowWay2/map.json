@@ -20,7 +20,7 @@
     },
     {
       "direction": "down",
-      "offset": -50,
+      "offset": -46,
       "map": "MAP_SUMMIT_CITY"
     }
   ],
@@ -29,21 +29,21 @@
   ],
   "warp_events": [
     {
-      "x": 8,
-      "y": 8,
-      "elevation": 0,
-      "dest_map": "MAP_JAGOW_WOODS",
-      "dest_warp_id": 0
-    },
-    {
-      "x": 9,
-      "y": 8,
-      "elevation": 0,
-      "dest_map": "MAP_JAGOW_WOODS",
-      "dest_warp_id": 0
-    },
-    {
       "x": 10,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_JAGOW_WOODS",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 12,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_JAGOW_WOODS",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 11,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_JAGOW_WOODS",

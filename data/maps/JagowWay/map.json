@@ -32,6 +32,11 @@
       "direction": "left",
       "offset": 38,
       "map": "MAP_TRAIN_TRACK"
+    },
+    {
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_JAGOW_WAY2"
     }
   ],
   "object_events": [

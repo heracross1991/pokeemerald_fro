@@ -4544,7 +4544,7 @@
     {
       "id": "LAYOUT_JAGOW_WAY2",
       "name": "JagowWay2_Layout",
-      "width": 30,
+      "width": 40,
       "height": 20,
       "primary_tileset": "gTileset_General2",
       "secondary_tileset": "gTileset_Test",
@@ -4554,7 +4554,7 @@
     {
       "id": "LAYOUT_SUMMIT_CITY",
       "name": "SummitCity_Layout",
-      "width": 83,
+      "width": 86,
       "height": 80,
       "primary_tileset": "gTileset_General2",
       "secondary_tileset": "gTileset_SummitCity",
