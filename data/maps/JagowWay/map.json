@@ -15,7 +15,7 @@
   "connections": [
     {
       "direction": "left",
-      "offset": -2,
+      "offset": -6,
       "map": "MAP_LAKE_MEAD_VILLAGE"
     },
     {
@@ -27,6 +27,11 @@
       "direction": "up",
       "offset": -60,
       "map": "MAP_LAKE_MEAD"
+    },
+    {
+      "direction": "left",
+      "offset": 38,
+      "map": "MAP_TRAIN_TRACK"
     }
   ],
   "object_events": [
@@ -64,7 +69,7 @@
       "y": 83,
       "elevation": 0,
       "dest_map": "MAP_JAGOW_WOODS",
-      "dest_warp_id": 0
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [

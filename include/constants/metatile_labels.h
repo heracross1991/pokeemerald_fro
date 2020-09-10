@@ -202,11 +202,11 @@
 #define METATILE_General_CalmWater             0x170
 #define METATILE_General_CaveEntrance_Bottom   0x0A7
 #define METATILE_General_CaveEntrance_Top      0x09F
-#define METATILE_General_Door                  0x021
 #define METATILE_General_Door_Contest          0x1DB
 #define METATILE_General_Door_Gym              0x1CD
-#define METATILE_General_Door_PokeCenter       0x061
+#define METATILE_General_Door_PokeCenter       0x062
 #define METATILE_General_Door_PokeMart         0x041
+#define METATILE_General_General_Door          0x003
 #define METATILE_General_Grass                 0x001
 #define METATILE_General_Grass_TreeLeft        0x1CE
 #define METATILE_General_Grass_TreeRight       0x1CF
@@ -391,10 +391,10 @@
 
 // gTileset_Petalburg
 #define METATILE_Petalburg_Door_BirchsLab        0x249
-#define METATILE_Petalburg_Door_Littleroot       0x248
+#define METATILE_Petalburg_Door_Littleroot       0x32E
 #define METATILE_Petalburg_Door_Nalls_Residence  0x32A
 #define METATILE_Petalburg_Door_Oldale           0x287
-#define METATILE_Petalburg_Door_TilyousLab       0x364
+#define METATILE_Petalburg_Door_TilyousLab       0x363
 #define METATILE_Petalburg_LAKEMEADDOOR          0x2E9
 #define METATILE_Petalburg_SecretBase_VineLeft   0x3B7
 #define METATILE_Petalburg_SecretBase_VineRight  0x3B6

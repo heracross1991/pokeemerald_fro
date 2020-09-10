@@ -586,3 +586,38 @@ gMetatiles_Test::
 	.align 1
 gMetatileAttributes_Test::
 	.incbin "data/tilesets/secondary/test/metatile_attributes.bin"
+	.align 1
+gMetatiles_gTileset_WalmoreTown::
+	.incbin "data/tilesets/primary/gtileset_walmoretown/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_gTileset_WalmoreTown::
+	.incbin "data/tilesets/primary/gtileset_walmoretown/metatile_attributes.bin"
+	.align 1
+gMetatiles_WalmoreTown::
+	.incbin "data/tilesets/secondary/walmoretown/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_WalmoreTown::
+	.incbin "data/tilesets/secondary/walmoretown/metatile_attributes.bin"
+	.align 1
+gMetatiles_JagowWoods::
+	.incbin "data/tilesets/secondary/jagowwoods/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_JagowWoods::
+	.incbin "data/tilesets/secondary/jagowwoods/metatile_attributes.bin"
+	.align 1
+gMetatiles_General2::
+	.incbin "data/tilesets/primary/general2/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_General2::
+	.incbin "data/tilesets/primary/general2/metatile_attributes.bin"
+	.align 1
+gMetatiles_SummitCity::
+	.incbin "data/tilesets/secondary/summitcity/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SummitCity::
+	.incbin "data/tilesets/secondary/summitcity/metatile_attributes.bin"

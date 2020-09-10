@@ -22,6 +22,7 @@
 #include "string_util.h"
 #include "strings.h"
 #include "task.h"
+#include "party_menu.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
@@ -670,7 +671,14 @@ static void DoMoveRelearnerMain(void)
         if (!gPaletteFade.active)
         {
             FreeMoveRelearnerResources();
-            SetMainCallback2(CB2_ReturnToField);
+             if(gSpecialVar_0x8000 == 200)
+             {
+                 SetMainCallback2(CB2_ReturnToPartyMenuFromFlyMap);
+             }
+             else
+             {            
+                 SetMainCallback2(CB2_ReturnToField);
+             }
         }
         break;
     case MENU_STATE_FADE_FROM_SUMMARY_SCREEN:

@@ -1809,3 +1809,103 @@ gTilesetPalettes_Test::
 	.align 2
 gTilesetTiles_Test::
 	.incbin "data/tilesets/secondary/test/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_gTileset_WalmoreTown::
+	.incbin "data/tilesets/primary/gtileset_walmoretown/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/gtileset_walmoretown/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/gtileset_walmoretown/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/gtileset_walmoretown/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/gtileset_walmoretown/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/gtileset_walmoretown/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/gtileset_walmoretown/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/gtileset_walmoretown/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/gtileset_walmoretown/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/gtileset_walmoretown/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/gtileset_walmoretown/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/gtileset_walmoretown/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/gtileset_walmoretown/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_gTileset_WalmoreTown::
+	.incbin "data/tilesets/primary/gtileset_walmoretown/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_WalmoreTown::
+	.incbin "data/tilesets/secondary/walmoretown/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_WalmoreTown::
+	.incbin "data/tilesets/secondary/walmoretown/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_JagowWoods::
+	.incbin "data/tilesets/secondary/jagowwoods/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/jagowwoods/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/jagowwoods/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/jagowwoods/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/jagowwoods/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/jagowwoods/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/jagowwoods/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/jagowwoods/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/jagowwoods/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/jagowwoods/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/jagowwoods/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/jagowwoods/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/jagowwoods/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_JagowWoods::
+	.incbin "data/tilesets/secondary/jagowwoods/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_General2::
+	.incbin "data/tilesets/primary/general2/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/general2/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/general2/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/general2/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/general2/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/general2/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/general2/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/general2/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/general2/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/general2/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/general2/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/general2/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/general2/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_General2::
+	.incbin "data/tilesets/primary/general2/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SummitCity::
+	.incbin "data/tilesets/secondary/summitcity/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SummitCity::
+	.incbin "data/tilesets/secondary/summitcity/tiles.4bpp.lz"

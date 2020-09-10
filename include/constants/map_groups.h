@@ -63,6 +63,8 @@
 #define MAP_JAGOW_WAY         (58 | (0 << 8))
 #define MAP_WALMORE_TOWN      (59 | (0 << 8))
 #define MAP_LAKE_MEAD         (60 | (0 << 8))
+#define MAP_JAGOW_WAY2        (61 | (0 << 8))
+#define MAP_SUMMIT_CITY       (62 | (0 << 8))
 
 // Map Group 1
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F     (0 | (1 << 8))
@@ -598,6 +600,7 @@
 
 // Map Group 33
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
+#define MAP_TRAIN_TRACK                            (1 | (33 << 8))
 
 #define MAP_GROUPS_COUNT 34
 

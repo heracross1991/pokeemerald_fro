@@ -203,6 +203,7 @@ static const u8 sMapName_JagowWay[] =_("Jagow Way");
 static const u8 sMapName_WalmoreTown[] =_("Walmore Town");
 static const u8 sMapName_JagowWoods[] =_("Jagow Woods");
 static const u8 sMapName_LakeMead[] =_("Lake Mead");
+static const u8 sMapName_JagowWay2[] =_("Jagow Way");
 
 const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_LITTLEROOT_TOWN]           = { 4, 11, 1, 1, sMapName_LittlerootTown},

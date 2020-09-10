@@ -97,7 +97,9 @@
     "LakeMeadVillage",
     "JagowWay",
     "WalmoreTown",
-    "LakeMead"
+    "LakeMead",
+    "JagowWay2",
+    "SummitCity"
   ],
   "gMapGroup1": [
     "LittlerootTown_BrendansHouse_1F",
@@ -632,6 +634,7 @@
     "Route119_House"
   ],
   "gMapGroup33": [
-    "Route124_DivingTreasureHuntersHouse"
+    "Route124_DivingTreasureHuntersHouse",
+    "TrainTrack"
   ]
 }

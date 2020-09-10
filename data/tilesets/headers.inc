@@ -873,3 +873,58 @@ gTileset_Test::
 	.4byte gMetatiles_Test
 	.4byte gMetatileAttributes_Test
 	.4byte NULL
+
+	.align 2
+gTileset_gTileset_WalmoreTown::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_gTileset_WalmoreTown
+	.4byte gTilesetPalettes_gTileset_WalmoreTown
+	.4byte gMetatiles_gTileset_WalmoreTown
+	.4byte gMetatileAttributes_gTileset_WalmoreTown
+	.4byte NULL
+
+	.align 2
+gTileset_WalmoreTown::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_WalmoreTown
+	.4byte gTilesetPalettes_WalmoreTown
+	.4byte gMetatiles_WalmoreTown
+	.4byte gMetatileAttributes_WalmoreTown
+	.4byte NULL
+
+	.align 2
+gTileset_JagowWoods::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_JagowWoods
+	.4byte gTilesetPalettes_JagowWoods
+	.4byte gMetatiles_JagowWoods
+	.4byte gMetatileAttributes_JagowWoods
+	.4byte NULL
+
+	.align 2
+gTileset_General2::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_General2
+	.4byte gTilesetPalettes_General2
+	.4byte gMetatiles_General2
+	.4byte gMetatileAttributes_General2
+	.4byte NULL
+
+	.align 2
+gTileset_SummitCity::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_SummitCity
+	.4byte gTilesetPalettes_SummitCity
+	.4byte gMetatiles_SummitCity
+	.4byte gMetatileAttributes_SummitCity
+	.4byte NULL

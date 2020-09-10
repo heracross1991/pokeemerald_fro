@@ -227,7 +227,7 @@ static const u8 sDoorAnimPalettes_LakeMeadNallsResidence[] = {11, 11, 11, 11, 11
 static const u8 sDoorAnimPalettes_LakeMeadTilyousLab[] = {11, 11, 11, 11, 11, 11, 11, 11};
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
-    {METATILE_General_Door,                                 DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_General, sDoorAnimPalettes_General},
+    //{METATILE_General_Door,                                 DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_General, sDoorAnimPalettes_General},
     {METATILE_General_Door_PokeCenter,                      DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_PokeCenter, sDoorAnimPalettes_PokeCenter},
     {METATILE_General_Door_Gym,                             DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_Gym, sDoorAnimPalettes_Gym},
     {METATILE_General_Door_PokeMart,                        DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_PokeMart, sDoorAnimPalettes_PokeMart},

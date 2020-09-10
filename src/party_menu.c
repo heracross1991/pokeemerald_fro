@@ -77,6 +77,7 @@
 #include "constants/songs.h"
 #include "constants/species.h"
 #include "constants/vars.h"
+#include "move_relearner.h"
 
 #define PARTY_PAL_SELECTED     (1 << 0)
 #define PARTY_PAL_FAINTED      (1 << 1)
@@ -402,6 +403,7 @@ static void CursorCb_Register(u8);
 static void CursorCb_Trade1(u8);
 static void CursorCb_Trade2(u8);
 static void CursorCb_Toss(u8);
+static void CursorCb_Relearn(u8);
 static void CursorCb_FieldMove(u8);
 static bool8 SetUpFieldMove_Surf(void);
 static bool8 SetUpFieldMove_Fly(void);
@@ -2539,6 +2541,7 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
 
     sPartyMenuInternal->numActions = 0;
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SUMMARY);
+    AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_RELEARN);
 
     // Add field moves to action list
     for (i = 0; i < MAX_MON_MOVES; i++)
@@ -3249,6 +3252,31 @@ static void CursorCb_Toss(u8 taskId)
         DisplayPartyMenuMessage(gStringVar4, TRUE);
         gTasks[taskId].func = Task_TossHeldItemYesNo;
     }
+}
+
+static void CursorCb_Relearn(u8 taskId){
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    PlaySE(SE_SELECT);
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
+    gSpecialVar_0x8004 = gPartyMenu.slotId;
+    IsSelectedMonEgg();
+    if (gSpecialVar_0x8004 >= PARTY_SIZE)
+    {
+        gSpecialVar_0x8004 = 0xFF;
+    }
+    else if(GetNumberOfRelearnableMoves(&gPlayerParty[gSpecialVar_0x8004]) == 0 || gSpecialVar_Result)
+    {
+        //no moves to relearn
+        StringExpandPlaceholders(gStringVar4, gText_NoMoveToRelearn);
+        DisplayPartyMenuMessage(gStringVar4, TRUE);
+        gTasks[taskId].func = Task_UpdateHeldItemSprite;
+    }
+    else
+    {
+        gSpecialVar_0x8000 = 200;
+        TeachMoveRelearnerMove();
+    }
+
 }
 
 static void Task_TossHeldItemYesNo(u8 taskId)

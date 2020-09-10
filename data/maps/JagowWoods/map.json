@@ -18,11 +18,32 @@
   ],
   "warp_events": [
     {
-      "x": 15,
-      "y": 0,
+      "x": 51,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_JAGOW_WAY",
       "dest_warp_id": 1
+    },
+    {
+      "x": 50,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_JAGOW_WAY",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 17,
+      "y": 57,
+      "elevation": 0,
+      "dest_map": "MAP_JAGOW_WAY2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 18,
+      "y": 57,
+      "elevation": 0,
+      "dest_map": "MAP_JAGOW_WAY2",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [

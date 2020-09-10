@@ -22,6 +22,11 @@
       "direction": "up",
       "offset": -30,
       "map": "MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE"
+    },
+    {
+      "direction": "up",
+      "offset": -30,
+      "map": "MAP_LAKE_MEAD"
     }
   ],
   "object_events": [
@@ -142,7 +147,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 16,
+      "x": 9,
       "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -151,7 +156,7 @@
     {
       "type": "sign",
       "x": 19,
-      "y": 13,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Script_LakeMeadVillage_NallsResidenceSign"
@@ -159,7 +164,7 @@
     {
       "type": "sign",
       "x": 18,
-      "y": 21,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Script_LakeMeadVillage_TilyouLabSign"

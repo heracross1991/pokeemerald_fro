@@ -663,5 +663,5 @@ LakeMeadVillage_FrosBasement_Blastoisinite::
 	end
 	
 LakeMeadVillage_FrosBasement_Mega_Bracelet:: 
-	finditem ITEM_MEGA_BRACELET 
+	giveitem ITEM_RARE_CANDY, 10
 	end
