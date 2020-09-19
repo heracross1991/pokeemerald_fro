@@ -1088,3 +1088,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/JagowWay2/scripts.inc"
 
 	.include "data/maps/SummitCity/scripts.inc"
+
+	.include "data/maps/SummitCityTopCorner/scripts.inc"

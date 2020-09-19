@@ -13,7 +13,7 @@ LakeMeadVillage_MapScripts::
 // VAR_LAKE_MEAD_VILLAGE_INTRO_STATE 6 = Unlocks special dialouge option for Isiah in village
 
 
-// VAR_LAKE_MEAD_VILLAGE_TOWN_STATE 0 = Default Town State, prevents player from leaving town before finding professor and picking pokemon
+// VAR_LAKE_MEAD_VILLAGE_TOWN_STATE 0 = Default Town State, preventrs player from leaving town befoe finding professor and picking pokemon
 // VAR_LAKE_MEAD_VILLAGE_TOWN_STATE 1 = Mom has told you Isiah was just here looking for you. Now you can try to leave town and professor will stop you and take you to his lab
 // VAR_LAKE_MEAD_VILLAGE_TOWN_STATE 2 = Set after professor takes you to his lab. 
 // VAR_LAKE_MEAD_VILLAGE_TOWN_STATE 3 = Set after dialouge telling you to pick pokemon inside lab. also prevents player from leaving lab without picking pokemon
@@ -39,7 +39,7 @@ LakeMeadVillage_OnLoad:
 	
 
 Script_LakeMeadVillage_MoveLittleBoyRemoveIsiah:
-	setobjectxyperm 1, 19, 10
+	setobjectxyperm 1, 27, 16
 	setobjectmovementtype 1, MOVEMENT_TYPE_FACE_LEFT
 	removeobject 2
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_ISIAH

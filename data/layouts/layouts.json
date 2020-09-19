@@ -4547,19 +4547,29 @@
       "width": 40,
       "height": 20,
       "primary_tileset": "gTileset_General2",
-      "secondary_tileset": "gTileset_Test",
+      "secondary_tileset": "gTileset_SummitCity",
       "border_filepath": "data/layouts/JagowWay2/border.bin",
       "blockdata_filepath": "data/layouts/JagowWay2/map.bin"
     },
     {
       "id": "LAYOUT_SUMMIT_CITY",
       "name": "SummitCity_Layout",
-      "width": 86,
-      "height": 80,
+      "width": 50,
+      "height": 60,
       "primary_tileset": "gTileset_General2",
       "secondary_tileset": "gTileset_SummitCity",
       "border_filepath": "data/layouts/SummitCity/border.bin",
       "blockdata_filepath": "data/layouts/SummitCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUMMIT_CITY_TOP_CORNER",
+      "name": "SummitCityTopCorner_Layout",
+      "width": 20,
+      "height": 33,
+      "primary_tileset": "gTileset_General2",
+      "secondary_tileset": "gTileset_SummitCity",
+      "border_filepath": "data/layouts/SummitCityTopCorner/border.bin",
+      "blockdata_filepath": "data/layouts/SummitCityTopCorner/map.bin"
     }
   ]
 }

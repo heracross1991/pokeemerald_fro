@@ -20,8 +20,13 @@
     },
     {
       "direction": "down",
-      "offset": -46,
+      "offset": -30,
       "map": "MAP_SUMMIT_CITY"
+    },
+    {
+      "direction": "down",
+      "offset": 20,
+      "map": "MAP_SUMMIT_CITY_TOP_CORNER"
     }
   ],
   "object_events": [
