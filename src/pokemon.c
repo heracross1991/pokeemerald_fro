@@ -99,7 +99,7 @@ static const struct CombinedMove sCombinedMoves[2] =
 
 const u16 gSpeciesToHoennPokedexNum[NUM_SPECIES] = // Assigns all species to the Hoenn Dex Index (Summary No. for Hoenn Dex)
 {
-	SPECIES_TO_HOENN(SNIVY),
+	SPECIES_TO_HOENN(COOTINY),
 	SPECIES_TO_HOENN(SERVINE),
 	SPECIES_TO_HOENN(SERPERIOR),
 	SPECIES_TO_HOENN(CHIMCHAR),
@@ -868,7 +868,7 @@ const u16 gSpeciesToNationalPokedexNum[NUM_SPECIES] = // Assigns all species to 
 	SPECIES_TO_NATIONAL(SHAYMIN),
 	SPECIES_TO_NATIONAL(ARCEUS),
 	SPECIES_TO_NATIONAL(VICTINI),
-	SPECIES_TO_NATIONAL(SNIVY),
+	SPECIES_TO_NATIONAL(COOTINY),
 	SPECIES_TO_NATIONAL(GROVYLE),
 	SPECIES_TO_NATIONAL(SERPERIOR),
 	SPECIES_TO_NATIONAL(TEPIG),
@@ -1192,7 +1192,7 @@ const u16 gSpeciesToNationalPokedexNum[NUM_SPECIES] = // Assigns all species to 
 
 const u16 gHoennToNationalOrder[HOENN_DEX_COUNT] = // Assigns Hoenn Dex Pokémon (Using National Dex Index)
 {
-    HOENN_TO_NATIONAL(SNIVY),
+    HOENN_TO_NATIONAL(COOTINY),
 	HOENN_TO_NATIONAL(SERVINE),
 	HOENN_TO_NATIONAL(SERPERIOR),
 	HOENN_TO_NATIONAL(CHIMCHAR),
@@ -2159,6 +2159,9 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_ROTOM_FAN - 1] = 43,
     [SPECIES_ROTOM_MOW - 1] = 0,
     [SPECIES_ROTOM_WASH - 1] = 0,
+
+    // Fakemon
+    [SPECIES_COOTINY - 1] = 0x09,
 };
 
 static const u8 sMonAnimationDelayTable[NUM_SPECIES - 1] =

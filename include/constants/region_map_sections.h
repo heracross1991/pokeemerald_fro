@@ -220,7 +220,10 @@
 #define MAPSEC_JAGOW_WOODS                  0xD8
 #define MAPSEC_LAKE_MEAD           0xD9
 #define MAPSEC_SUMMIT_CITY                  0xDA
-#define MAPSEC_NONE                         0xDB
+#define MAPSEC_LANCELOT                     0xDB
+#define MAPSEC_LYNCH_PARK                   0xDC
+#define MAPSEC_WILLIAMS_TRAIL_EAST          0xDD
+#define MAPSEC_NONE                         0xDE
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

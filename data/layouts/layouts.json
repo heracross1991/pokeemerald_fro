@@ -4245,9 +4245,9 @@
       "id": "LAYOUT_NAVEL_ROCK_LADDER_ROOM1",
       "name": "NavelRock_LadderRoom1_Layout",
       "width": 9,
-      "height": 8,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_NavelRock",
+      "height": 28,
+      "primary_tileset": "gTileset_General2",
+      "secondary_tileset": "gTileset_LynchPark",
       "border_filepath": "data/layouts/NavelRock_LadderRoom1/border.bin",
       "blockdata_filepath": "data/layouts/NavelRock_LadderRoom1/map.bin"
     },
@@ -4570,6 +4570,46 @@
       "secondary_tileset": "gTileset_SummitCity",
       "border_filepath": "data/layouts/SummitCityTopCorner/border.bin",
       "blockdata_filepath": "data/layouts/SummitCityTopCorner/map.bin"
+    },
+    {
+      "id": "LAYOUT_LANCELOT_PATH",
+      "name": "LancelotPath_Layout",
+      "width": 40,
+      "height": 49,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_WalmoreTown",
+      "border_filepath": "data/layouts/LancelotPath/border.bin",
+      "blockdata_filepath": "data/layouts/LancelotPath/map.bin"
+    },
+    {
+      "id": "LAYOUT_LYNCH_PARK",
+      "name": "LynchPark_Layout",
+      "width": 35,
+      "height": 24,
+      "primary_tileset": "gTileset_General2",
+      "secondary_tileset": "gTileset_LynchPark",
+      "border_filepath": "data/layouts/LynchPark/border.bin",
+      "blockdata_filepath": "data/layouts/LynchPark/map.bin"
+    },
+    {
+      "id": "LAYOUT_WILLIAMS_TRAIL_EAST",
+      "name": "WilliamsTrailEast_Layout",
+      "width": 80,
+      "height": 24,
+      "primary_tileset": "gTileset_General2",
+      "secondary_tileset": "gTileset_LynchPark",
+      "border_filepath": "data/layouts/WilliamsTrailEast/border.bin",
+      "blockdata_filepath": "data/layouts/WilliamsTrailEast/map.bin"
+    },
+    {
+      "id": "LAYOUT_LANCELOT_LOWER",
+      "name": "LancelotLower_Layout",
+      "width": 40,
+      "height": 49,
+      "primary_tileset": "gTileset_General2",
+      "secondary_tileset": "gTileset_WalmoreTown",
+      "border_filepath": "data/layouts/LancelotLower/border.bin",
+      "blockdata_filepath": "data/layouts/LancelotLower/map.bin"
     }
   ]
 }

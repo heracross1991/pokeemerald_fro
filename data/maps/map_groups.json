@@ -99,7 +99,11 @@
     "WalmoreTown",
     "LakeMead",
     "JagowWay2",
-    "SummitCity"
+    "SummitCity",
+    "LancelotPath",
+    "LynchPark",
+    "WilliamsTrailEast",
+    "LancelotLower"
   ],
   "gMapGroup1": [
     "LittlerootTown_BrendansHouse_1F",

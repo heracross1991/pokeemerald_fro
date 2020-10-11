@@ -621,3 +621,10 @@ gMetatiles_SummitCity::
 	.align 1
 gMetatileAttributes_SummitCity::
 	.incbin "data/tilesets/secondary/summitcity/metatile_attributes.bin"
+	.align 1
+gMetatiles_LynchPark::
+	.incbin "data/tilesets/secondary/lynchpark/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_LynchPark::
+	.incbin "data/tilesets/secondary/lynchpark/metatile_attributes.bin"

@@ -4857,3 +4857,8 @@ const u8 gMelmetalPokedexText[] = _(
     "Revered long ago for its capacity to create\n"
     "iron from nothing, for some reason it has\n"
     "come back to life after 3,000 years.");
+
+const u8 gCootinyPokedexText[] =_(
+    "This is a test Pokedex entry\n"
+    "I'm not sure if it works\n"
+    "Please Work");

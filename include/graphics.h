@@ -5071,6 +5071,14 @@ extern const u8 gMonFootprint_Jirachi[];
 extern const u8 gMonFootprint_Deoxys[];
 extern const u8 gMonFootprint_Chimecho[];
 
+
+extern const u32 gMonFrontPic_Cootiny[];
+extern const u32 gMonPalette_Cootiny[];
+extern const u32 gMonBackPic_Cootiny[];
+extern const u32 gMonShinyPalette_Cootiny[];
+extern const u32 gMonStillFrontPic_Cootiny[];
+extern const u8 gMonIcon_Cootiny[];
+extern const u8 gMonFootprint_Cootiny[];
 // trainer sprites
 extern const u32 gTrainerFrontPic_Hiker[];
 extern const u32 gTrainerFrontPic_AquaGruntM[];

@@ -6958,7 +6958,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_JohnJagowWayTreecko[] = 
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_SNIVY,
+    .species = SPECIES_COOTINY,
     }
 };
 static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Treecko[] = {

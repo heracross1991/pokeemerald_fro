@@ -19580,5 +19580,28 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM24_THUNDERBOLT)
 											| TMHM(TM25_THUNDER)
 											| TMHM(TM06_TOXIC)),
+	
+	[SPECIES_COOTINY]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
+											| TMHM(TM09_BULLET_SEED)
+											| TMHM(HM01_CUT)
+											| TMHM(TM32_DOUBLE_TEAM)
+											| TMHM(TM42_FACADE)
+											| TMHM(HM05_FLASH)
+											| TMHM(TM21_FRUSTRATION)
+											| TMHM(TM19_GIGA_DRAIN)
+											| TMHM(TM10_HIDDEN_POWER)
+											| TMHM(TM16_LIGHT_SCREEN)
+											| TMHM(TM17_PROTECT)
+											| TMHM(TM33_REFLECT)
+											| TMHM(TM44_REST)
+											| TMHM(TM27_RETURN)
+											| TMHM(HM06_ROCK_SMASH)
+											| TMHM(TM20_SAFEGUARD)
+											| TMHM(TM43_SECRET_POWER)
+											| TMHM(TM36_SLUDGE_BOMB)
+											| TMHM(TM22_SOLARBEAM)
+											| TMHM(HM04_STRENGTH)
+											| TMHM(TM11_SUNNY_DAY)
+											| TMHM(TM06_TOXIC)),
 
 };

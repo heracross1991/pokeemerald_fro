@@ -1090,3 +1090,11 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/SummitCity/scripts.inc"
 
 	.include "data/maps/SummitCityTopCorner/scripts.inc"
+
+	.include "data/maps/LancelotPath/scripts.inc"
+
+	.include "data/maps/LynchPark/scripts.inc"
+
+	.include "data/maps/WilliamsTrailEast/scripts.inc"
+
+	.include "data/maps/LancelotLower/scripts.inc"

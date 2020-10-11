@@ -5940,17 +5940,17 @@ const struct PokedexEntry gPokedexEntries[] =
 		.trainerOffset = 0,
 	},
 
-	[NATIONAL_DEX_SNIVY] =
-	{
-		.categoryName = _("Grass Snake"),
-		.height = 6,
-		.weight = 81,
-		.description = gSnivyPokedexText,
-		.pokemonScale = 356,
-		.pokemonOffset = 17,
-		.trainerScale = 256,
-		.trainerOffset = 0,
-	},
+	//[NATIONAL_DEX_SNIVY] =
+	//{
+	//	.categoryName = _("Grass Snake"),
+	//	.height = 6,
+	//	.weight = 81,
+	//	.description = gSnivyPokedexText,
+	//	.pokemonScale = 356,
+	//	.pokemonOffset = 17,
+	//	.trainerScale = 256,
+	//	.trainerOffset = 0,
+	//},
 
 	[NATIONAL_DEX_SERVINE] =
 	{
@@ -9714,6 +9714,18 @@ const struct PokedexEntry gPokedexEntries[] =
 		.height = 25,
 		.weight = 800,
 		.description = gMelmetalPokedexText,
+		.pokemonScale = 255,
+		.pokemonOffset = 1,
+		.trainerScale = 387,
+		.trainerOffset = 2,
+	},
+
+	[NATIONAL_DEX_COOTINY] =
+	{
+		.categoryName = _("Bandicoot"),
+		.height = 25,
+		.weight = 42,
+		.description = gCootinyPokedexText,
 		.pokemonScale = 255,
 		.pokemonOffset = 1,
 		.trainerScale = 387,

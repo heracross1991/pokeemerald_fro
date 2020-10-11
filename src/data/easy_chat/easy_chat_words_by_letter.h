@@ -155,6 +155,7 @@ const u16 gEasyChatWordsByLetter_B[] = {
     EC_WORD_BEGINNING,
     EC_WORD_BEING,
     EC_POKEMON(BELDUM),
+    EC_POKEMON(COOTINY),
     EC_WORD_BELIEVE,
     -1, 2, // Doubled pokemon species name
     EC_POKEMON(BELLOSSOM),

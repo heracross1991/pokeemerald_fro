@@ -4614,4 +4614,9 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x45,
         .y_offset = 0x00,
     },
+     [SPECIES_COOTINY] =
+    {
+        .size = 0x45,
+        .y_offset = 0x5,
+    },
 };
