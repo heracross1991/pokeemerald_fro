@@ -939,3 +939,14 @@ gTileset_LynchPark::
 	.4byte gMetatiles_LynchPark
 	.4byte gMetatileAttributes_LynchPark
 	.4byte NULL
+
+	.align 2
+gTileset_Lancelot::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Lancelot
+	.4byte gTilesetPalettes_Lancelot
+	.4byte gMetatiles_Lancelot
+	.4byte gMetatileAttributes_Lancelot
+	.4byte NULL

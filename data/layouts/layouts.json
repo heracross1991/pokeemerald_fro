@@ -497,7 +497,7 @@
       "width": 80,
       "height": 40,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Pacifidlog",
+      "secondary_tileset": "gTileset_Lancelot",
       "border_filepath": "data/layouts/Route134/border.bin",
       "blockdata_filepath": "data/layouts/Route134/map.bin"
     },
@@ -4484,7 +4484,7 @@
     {
       "id": "LAYOUT_WALMORE_TOWN",
       "name": "WalmoreTown_Layout",
-      "width": 45,
+      "width": 53,
       "height": 51,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_WalmoreTown",
@@ -4574,10 +4574,10 @@
     {
       "id": "LAYOUT_LANCELOT_PATH",
       "name": "LancelotPath_Layout",
-      "width": 40,
+      "width": 36,
       "height": 49,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_WalmoreTown",
+      "secondary_tileset": "gTileset_Lancelot",
       "border_filepath": "data/layouts/LancelotPath/border.bin",
       "blockdata_filepath": "data/layouts/LancelotPath/map.bin"
     },
@@ -4604,10 +4604,10 @@
     {
       "id": "LAYOUT_LANCELOT_LOWER",
       "name": "LancelotLower_Layout",
-      "width": 40,
+      "width": 36,
       "height": 49,
       "primary_tileset": "gTileset_General2",
-      "secondary_tileset": "gTileset_WalmoreTown",
+      "secondary_tileset": "gTileset_Lancelot",
       "border_filepath": "data/layouts/LancelotLower/border.bin",
       "blockdata_filepath": "data/layouts/LancelotLower/map.bin"
     }

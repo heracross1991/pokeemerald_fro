@@ -628,3 +628,10 @@ gMetatiles_LynchPark::
 	.align 1
 gMetatileAttributes_LynchPark::
 	.incbin "data/tilesets/secondary/lynchpark/metatile_attributes.bin"
+	.align 1
+gMetatiles_Lancelot::
+	.incbin "data/tilesets/secondary/lancelot/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_Lancelot::
+	.incbin "data/tilesets/secondary/lancelot/metatile_attributes.bin"

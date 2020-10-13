@@ -1929,3 +1929,23 @@ gTilesetPalettes_LynchPark::
 	.align 2
 gTilesetTiles_LynchPark::
 	.incbin "data/tilesets/secondary/lynchpark/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_Lancelot::
+	.incbin "data/tilesets/secondary/lancelot/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/lancelot/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/lancelot/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/lancelot/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/lancelot/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/lancelot/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/lancelot/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/lancelot/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/lancelot/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/lancelot/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/lancelot/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/lancelot/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/lancelot/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_Lancelot::
+	.incbin "data/tilesets/secondary/lancelot/tiles.4bpp.lz"
