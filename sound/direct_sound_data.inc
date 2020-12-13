@@ -1491,7 +1491,7 @@ Cry_Sceptile::
 	.incbin "sound/direct_sound_samples/cry_sceptile.bin"
 
 	.align 2
-Cry_Mudkip::
+Cry_Flobra::
 	.incbin "sound/direct_sound_samples/cry_mudkip.bin"
 
 	.align 2
@@ -1951,7 +1951,7 @@ Cry_Torterra::
 	.incbin "sound/direct_sound_samples/cry_not_torterra.bin"
 
 	.align 2
-Cry_Chimchar::
+Cry_Emboryps::
 	.incbin "sound/direct_sound_samples/cry_not_chimchar.bin"
 
 	.align 2
@@ -2371,7 +2371,7 @@ Cry_Victini::
 	.incbin "sound/direct_sound_samples/cry_not_victini.bin"
 
 	.align 2
-Cry_Snivy::
+Cry_Rascaloot::
 	.incbin "sound/direct_sound_samples/cry_not_snivy.bin"
 
 	.align 2

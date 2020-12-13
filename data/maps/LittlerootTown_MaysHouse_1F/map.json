@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PlayersHouse_1F_EventScript_Vigoroth1",
-      "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_MUDKIP"
+      "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_FLOBRA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VIGOROTH_CARRYING_BOX",
@@ -51,7 +51,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PlayersHouse_1F_EventScript_Vigoroth2",
-      "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_CHIMCHAR"
+      "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_EMBORYPS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",

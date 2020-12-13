@@ -118,7 +118,7 @@
 #define OBJ_EVENT_GFX_CABLE_CAR                  114
 #define OBJ_EVENT_GFX_SCIENTIST_2                115
 #define OBJ_EVENT_GFX_DEVON_EMPLOYEE             116
-#define OBJ_EVENT_GFX_AQUA_MEMBER_M              117
+#define OBJ_EVENT_GFX_LIBERTY_GRUNT_A              117
 #define OBJ_EVENT_GFX_AQUA_MEMBER_F              118
 #define OBJ_EVENT_GFX_MAGMA_MEMBER_M             119
 #define OBJ_EVENT_GFX_MAGMA_MEMBER_F             120
@@ -157,7 +157,7 @@
 #define OBJ_EVENT_GFX_SMOOCHUM_DOLL              153
 #define OBJ_EVENT_GFX_TREECKO_DOLL               154
 #define OBJ_EVENT_GFX_TORCHIC_DOLL               155
-#define OBJ_EVENT_GFX_MUDKIP_DOLL                156
+#define OBJ_EVENT_GFX_FLOBRA_DOLL                156
 #define OBJ_EVENT_GFX_DUSKULL_DOLL               157
 #define OBJ_EVENT_GFX_WYNAUT_DOLL                158
 #define OBJ_EVENT_GFX_BALTOY_DOLL                159

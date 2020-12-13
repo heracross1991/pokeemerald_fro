@@ -82,7 +82,7 @@ Route119_EventScript_BattleMay:: @ 81F450B
 	switch VAR_STARTER_MON
 	case 0, Route119_EventScript_BattleMayTreecko
 	case 1, Route119_EventScript_BattleMayTorchic
-	case 2, Route119_EventScript_BattleMayMudkip
+	case 2, Route119_EventScript_BattleMayFlobra
 	end
 
 Route119_EventScript_BattleMayTreecko:: @ 81F453A
@@ -95,8 +95,8 @@ Route119_EventScript_BattleMayTorchic:: @ 81F454A
 	goto Route119_EventScript_DefeatedMay
 	end
 
-Route119_EventScript_BattleMayMudkip:: @ 81F455A
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_119_MUDKIP, Route119_Text_MayDefeat
+Route119_EventScript_BattleMayFlobra:: @ 81F455A
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_119_FLOBRA, Route119_Text_MayDefeat
 	goto Route119_EventScript_DefeatedMay
 	end
 
@@ -112,7 +112,7 @@ Route119_EventScript_BattleBrendan:: @ 81F4585
 	switch VAR_STARTER_MON
 	case 0, Route119_EventScript_BattleBrendanTreecko
 	case 1, Route119_EventScript_BattleBrendanTorchic
-	case 2, Route119_EventScript_BattleBrendanMudkip
+	case 2, Route119_EventScript_BattleBrendanFlobra
 	end
 
 Route119_EventScript_BattleBrendanTreecko:: @ 81F45B4
@@ -125,8 +125,8 @@ Route119_EventScript_BattleBrendanTorchic:: @ 81F45C4
 	goto Route119_EventScript_DefeatedBrendan
 	end
 
-Route119_EventScript_BattleBrendanMudkip:: @ 81F45D4
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_119_MUDKIP, Route119_Text_BrendanDefeat
+Route119_EventScript_BattleBrendanFlobra:: @ 81F45D4
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_119_FLOBRA, Route119_Text_BrendanDefeat
 	goto Route119_EventScript_DefeatedBrendan
 	end
 

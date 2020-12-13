@@ -433,6 +433,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_33 0x1122
 #define OBJ_EVENT_PAL_TAG_34 0x1123
 #define OBJ_EVENT_PAL_JOHN   0x1124
+#define OBJ_EVENT_PAL_LIBERTY_GRUNT_A 0x1125
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -480,6 +481,7 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPalette33, OBJ_EVENT_PAL_TAG_33},
     {gObjectEventPalette34, OBJ_EVENT_PAL_TAG_34},
 	{gObjectEventPalette_John, OBJ_EVENT_PAL_JOHN},
+    {gObjectEventPalette_LibertyGruntA, OBJ_EVENT_PAL_LIBERTY_GRUNT_A},
     {NULL,                  0x0000},
 };
 const u16 gPlayerReflectionPaletteTags[] = {

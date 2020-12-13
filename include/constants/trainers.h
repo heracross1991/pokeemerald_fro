@@ -18,7 +18,7 @@
 #define TRAINER_CUSTOM_PARTNER              3076
 
 #define TRAINER_PIC_HIKER                  0
-#define TRAINER_PIC_AQUA_GRUNT_M           1
+#define TRAINER_PIC_LIBERTY_GRUNT_M           1
 #define TRAINER_PIC_POKEMON_BREEDER_F      2
 #define TRAINER_PIC_COOLTRAINER_M          3
 #define TRAINER_PIC_BIRD_KEEPER            4
@@ -123,7 +123,7 @@
 #define TRAINER_BACK_PIC_STEVEN                 7
 
 #define FACILITY_CLASS_HIKER                 0x0
-#define FACILITY_CLASS_AQUA_GRUNT_M          0x1
+#define FACILITY_CLASS_LIBERTY_GRUNT_M          0x1
 #define FACILITY_CLASS_PKMN_BREEDER_F        0x2
 #define FACILITY_CLASS_COOLTRAINER_M         0x3
 #define FACILITY_CLASS_BIRD_KEEPER           0x4
@@ -208,7 +208,7 @@
 #define FACILITY_CLASSES_COUNT               0x52
 
 #define RS_FACILITY_CLASS_AQUA_LEADER_ARCHIE    0x0
-#define RS_FACILITY_CLASS_AQUA_GRUNT_M          0x1
+#define RS_FACILITY_CLASS_LIBERTY_GRUNT_M          0x1
 #define RS_FACILITY_CLASS_AQUA_GRUNT_F          0x2
 #define RS_FACILITY_CLASS_AROMA_LADY            0x3
 #define RS_FACILITY_CLASS_RUIN_MANIAC           0x4

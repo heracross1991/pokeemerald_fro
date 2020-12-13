@@ -1285,17 +1285,17 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x88,
         .y_offset = 0x0,
     },
-    [SPECIES_MUDKIP] =
+    [SPECIES_FLOBRA] =
     {
         .size = 0x56,
         .y_offset = 0xd,
     },
-    [SPECIES_MARSHTOMP] =
+    [SPECIES_MORPHLO] =
     {
         .size = 0x67,
         .y_offset = 0x5,
     },
-    [SPECIES_SWAMPERT] =
+    [SPECIES_MECHOBRA] =
     {
         .size = 0x88,
         .y_offset = 0x6,
@@ -1945,7 +1945,7 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x88,
         .y_offset = 0x0,
     },
-    [SPECIES_CHIMCHAR] =
+    [SPECIES_EMBORYPS] =
     {
         .size = 0x55,
         .y_offset = 0xa,
@@ -2470,7 +2470,7 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x45,
         .y_offset = 0xa,
     },
-    [SPECIES_SNIVY] =
+    [SPECIES_RASCALOOT] =
     {
         .size = 0x45,
         .y_offset = 0xc,

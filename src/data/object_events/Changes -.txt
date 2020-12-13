@@ -1,0 +1,10 @@
+Changes - 
+
+aqua_member_m -> liberty_grunt_a
+AQUA_MEMBER_M -> LIBERTY_GRUNT_A
+AquaMemeberM -> LibertyGruntA
+AQUA_GRUNT_M -> LIBERTY_GRUNT_M
+aqua_grunt_m -> liberty_grunt_m 
+AquaGruntM -> LibertyGruntM 
+
+

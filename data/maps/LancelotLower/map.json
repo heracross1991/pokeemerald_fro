@@ -14,21 +14,27 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "down",
-      "offset": -45,
-      "map": "MAP_WILLIAMS_TRAIL_EAST"
+      "direction": "up",
+      "offset": 11,
+      "map": "MAP_LANCELOT_PATH"
     },
     {
-      "direction": "up",
-      "offset": 0,
-      "map": "MAP_LANCELOT_PATH"
+      "direction": "down",
+      "offset": -33,
+      "map": "MAP_WILLIAMS_TRAIL_EAST"
     }
   ],
   "object_events": [
 
   ],
   "warp_events": [
-
+    {
+      "x": 28,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_LANCELOT_PATH",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 

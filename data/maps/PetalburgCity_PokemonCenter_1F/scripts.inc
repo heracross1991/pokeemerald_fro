@@ -41,7 +41,7 @@ PetalburgCity_PokemonCenter_1F_EventScript_SayStarterTypeInfo:: @ 8207A38
 	compare VAR_STARTER_MON, 1
 	call_if_eq PetalburgCity_PokemonCenter_1F_EventScript_SayTorchicType
 	compare VAR_STARTER_MON, 2
-	call_if_eq PetalburgCity_PokemonCenter_1F_EventScript_SayMudkipType
+	call_if_eq PetalburgCity_PokemonCenter_1F_EventScript_SayFlobraType
 	release
 	end
 
@@ -53,8 +53,8 @@ PetalburgCity_PokemonCenter_1F_EventScript_SayTorchicType:: @ 8207A64
 	msgbox PetalburgCity_PokemonCenter_1F_Text_TorchicIsFireType, MSGBOX_DEFAULT
 	return
 
-PetalburgCity_PokemonCenter_1F_EventScript_SayMudkipType:: @ 8207A6D
-	msgbox PetalburgCity_PokemonCenter_1F_Text_MudkipIsWaterType, MSGBOX_DEFAULT
+PetalburgCity_PokemonCenter_1F_EventScript_SayFlobraType:: @ 8207A6D
+	msgbox PetalburgCity_PokemonCenter_1F_Text_FlobraIsWaterType, MSGBOX_DEFAULT
 	return
 
 PetalburgCity_PokemonCenter_1F_Text_PCStorageSystem: @ 8207A76
@@ -90,8 +90,8 @@ PetalburgCity_PokemonCenter_1F_Text_TorchicIsFireType: @ 8207C35
 	.string "But, it's weak against WATER-type\n"
 	.string "POKéMON.$"
 
-PetalburgCity_PokemonCenter_1F_Text_MudkipIsWaterType: @ 8207CB7
-	.string "For example, your MUDKIP\n"
+PetalburgCity_PokemonCenter_1F_Text_FlobraIsWaterType: @ 8207CB7
+	.string "For example, your FLOBRA\n"
 	.string "is a WATER type.\p"
 	.string "It's strong against the FIRE type.\p"
 	.string "But, it's weak against GRASS-type\n"

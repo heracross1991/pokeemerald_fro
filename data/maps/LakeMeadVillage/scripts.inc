@@ -1,6 +1,7 @@
 LakeMeadVillage_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, LakeMeadVillage_OnLoad
-	//map_script MAP_SCRIPT_ON_FRAME_TABLE, LakeMeadVillage_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LakeMeadVillage_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LakeMeadVillage_OnWarp	
 	.byte 0
 
 //Variables
@@ -28,14 +29,25 @@ LakeMeadVillage_MapScripts::
 
 //Mapscripts
 
-
+LakeMeadVillage_OnFrame:
+map_script_2 VAR_WALMORE_TOWN_STATE, 2, Script_LMV_MoveIsiah
+map_script_2 VAR_WALMORE_TOWN_STATE, 3, Script_LMV_IsiahCaught
+.2byte 0
 
 LakeMeadVillage_OnLoad:
 	removeobject 2
 	setflag FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU
 	compare VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 0
 	goto_if_eq Script_LakeMeadVillage_MoveLittleBoyRemoveIsiah
+	compare VAR_WALMORE_TOWN_STATE, 3
+	goto_if_eq Script_LMV_MoveIsiah2
+	compare VAR_WALMORE_TOWN_STATE, 4
+	goto_if_eq Script_LMV_IsiahAndCaptainPosition
 	end
+
+LakeMeadVillage_OnWarp:
+	map_script_2 VAR_WALMORE_TOWN_STATE, 3, Script_LMV_WarpToCutscene
+	.2byte 0
 	
 
 Script_LakeMeadVillage_MoveLittleBoyRemoveIsiah:
@@ -122,7 +134,51 @@ Script_LakeMeadVillage_TilyouStopsYouFromLeaving2::
 	waitstate
 	release
 	end
-	
+
+Script_LMV_WarpToCutscene::
+hideobjectat OBJ_EVENT_ID_PLAYER, MAP_LAKE_MEAD_VILLAGE
+release
+end 
+
+Script_LMV_MoveIsiah::
+lockall
+setvar VAR_WALMORE_TOWN_STATE, 3
+warpsilent MAP_LAKE_MEAD_VILLAGE, 255, 9, 5
+releaseall
+end
+
+Script_LMV_MoveIsiah2::
+setobjectxyperm 4, 9, 0
+setobjectmovementtype 4, MOVEMENT_TYPE_NONE
+setobjectxyperm 7, 9, 0
+setobjectmovementtype 7, MOVEMENT_TYPE_NONE
+end
+
+Script_LMV_IsiahAndCaptainPosition:
+setobjectxyperm 4, 9, 4
+setobjectmovementtype 4, MOVEMENT_TYPE_NONE
+setobjectxyperm 7, 8, 4
+setobjectmovementtype 7, MOVEMENT_TYPE_NONE
+setobjectmovementtype 5, MOVEMENT_TYPE_FACE_UP
+setobjectmovementtype 6, MOVEMENT_TYPE_FACE_UP
+end
+
+Script_LMV_IsiahCaught:
+lockall
+delay 30
+msgbox T_LMV_TwoSoldiersTalking, MSGBOX_DEFAULT
+applymovement 5, M_LookUp
+applymovement 6, M_LookUp
+applymovement 4, M_LMV_IsiahCaught
+applymovement 7, M_LMV_Soldier1CaughtIsiah
+waitmovement 7
+msgbox T_LMV_Soldier3CaughtIsiah, MSGBOX_DEFAULT
+warpsilent MAP_LAKE_MEAD_VILLAGE, 255, 22, 23
+setvar VAR_WALMORE_TOWN_STATE, 4
+end
+
+Script_LMV_SaveIsiah::
+m
 
 //NPCs
 Script_LakeMeadVillage_NPC_LittleBoy::
@@ -177,7 +233,7 @@ Script_LakeMeadVillage_IsiahBeforeRecievedPokeDesserChecked:
 	goto_if_ge Script_LakeMeadVillage_NPC_IsiahTakePotionDresserChecked1
 	msgbox T_LakeMeadVillage_Isiah_ProfIsOutDresserChecked, MSGBOX_NPC
 	end
-	
+		
 
 Script_LakeMeadVillage_NPC_IsiahTakePotion1:
 	removeitem ITEM_POTION, 1
@@ -215,8 +271,39 @@ Script_LakeMeadVillage_NPC_IsiahTakePotionDresserChecked2:
 	removeitem ITEM_POTION, 1
 	msgbox T_LakeMeadVillage_Isiah_HaventSeenThemTakePotionDresserChecked, MSGBOX_NPC
 	end
-	
+
+Script_LMV_NPC_SoLGrunt1::
+compare VAR_WALMORE_TOWN_STATE, 4
+goto if_eq Script_LMV_SaveIsiah
+msgbox T_LMV_SoLGrunt1, MSGBOX_NPC
+end
+
+Script_LMV_NPC_SoLGrunt2::
+compare VAR_WALMORE_TOWN_STATE, 4
+goto if_eq Script_LMV_SaveIsiah
+msgbox T_LMV_SoLGrunt2, MSGBOX_NPC
+end
+
 //Movements
+
+M_LookUp:
+face_up
+step_end
+
+M_LMV_IsiahCaught:
+walk_down
+walk_down
+walk_down
+walk_down
+step_end
+
+M_LMV_Soldier1CaughtIsiah:
+walk_down
+walk_down
+walk_down
+walk_left
+walk_down
+step_end
 
 M_KidFaceLeft:
 face_left
@@ -422,4 +509,27 @@ T_LakeMeadVillage_Isiah_HaventSeenThemTakePotionDresserChecked:
 	.string "Sup Fro, glad to see \nyou found the Professor. \pI like your Pokémon.\p"
 	.string "No Frodo, I haven't seen your \nYu-Gi-Oh cards.\p" 
 	.string "Isiah stole a potion from your bag.$"
-	
+
+T_LMV_SoLGrunt1:
+	.string "Hey kid, {COLOR RED}stop {COLOR DARK_GREY}bothering me. We're in\n"
+	.string "the middle of very important\l"
+	.string "research.$"
+
+T_LMV_SoLGrunt2:
+	.string "We're on strict orders not to let\n"
+	.string "anyone into the lake are right now.\p"
+	.string "We will be done soon. Please move along.$"
+
+T_LMV_TwoSoldiersTalking:
+	.string "Soldier 1: This is so boring. I wish \nwe could be doing something with a\l little more action!\p"
+	.string "Soldier 2: It might not be the most \nfun, but we can't let anyone from town\lsee what we are doing, or it could \lruin our plans.\p"
+	.string "Soldier 1: Yea but this town only has \nlike 10 residents, who is going to try \lto sneak in? Besides it's not like \lthere has to be two of us here to be \lon lookout.\p"
+	.string "Soldier 2: Quiet down, captain is \ncoming back.$"
+
+T_LMV_Soldier3CaughtIsiah:
+	.string "Captain: I caught this hooligan\nsneaking around. He saw the prototype.\lWhat good are you two doing guarding\lthe entrance if some kid snuck by you?\p"
+	.string "Soldier 1: Sir, I... We...\p"
+	.string "Captian: I don't want to hear any \nexcuses. It doesn't matter now, we \lwill just have to detain him \lindefinitely.\p"
+	.string "Isiah: You can't do that! You have \nto let me go!\p"
+	.string "Captain: Quiet vermin!\pStone, Granger, you're relieved of \nyour lookout duties and will be \lreplaced by someone more qualified. \pI want you to take this child back \nto headquarters and have him locked \laway, he can't tell anyone about \lwhat he has seen. \pAnd don't mess up this time!\p"
+	.string "Stone, Granger: Sir, yes sir!$"

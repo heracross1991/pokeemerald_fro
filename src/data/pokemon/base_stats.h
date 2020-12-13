@@ -6757,14 +6757,14 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_MUDKIP] =
+    [SPECIES_FLOBRA] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 70,
-        .baseDefense   = 50,
+        .baseHP        = 60,
+        .baseAttack    = 50,
+        .baseDefense   = 65,
         .baseSpeed     = 40,
         .baseSpAttack  = 50,
-        .baseSpDefense = 50,
+        .baseSpDefense = 45,
         .type1 = TYPE_WATER,
         .type2 = TYPE_WATER,
         .catchRate = 45,
@@ -6783,7 +6783,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_MARSHTOMP] =
+    [SPECIES_MORPHLO] =
     {
         .baseHP        = 70,
         .baseAttack    = 85,
@@ -6809,7 +6809,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_SWAMPERT] =
+    [SPECIES_MECHOBRA] =
     {
         .baseHP        = 100,
         .baseAttack    = 110,
@@ -10246,20 +10246,20 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_CHIMCHAR] =
+    [SPECIES_EMBORYPS] =
     {
-        .baseHP        = 44,
-        .baseAttack    = 58,
-        .baseDefense   = 44,
-        .baseSpeed     = 61,
-        .baseSpAttack  = 58,
-        .baseSpDefense = 44,
+        .baseHP        = 47,
+        .baseAttack    = 48,
+        .baseDefense   = 50,
+        .baseSpeed     = 56,
+        .baseSpAttack  = 62,
+        .baseSpDefense = 47,
         .type1 = TYPE_FIRE,
         .type2 = TYPE_FIRE,
         .catchRate = 45,
         .expYield = 62,
-        .evYield_Speed     = 1,
-        .evYield_SpAttack  = 0,
+        .evYield_SpAttack  = 1,
+        .evYield_Speed  = 0,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 20,
         .friendship = 70,
@@ -13214,14 +13214,14 @@ const struct BaseStats gBaseStats[] =
         .noFlip = TRUE,
     },
 
-    [SPECIES_SNIVY] =
+    [SPECIES_RASCALOOT] =
     {
-        .baseHP        = 45,
-        .baseAttack    = 45,
-        .baseDefense   = 55,
-        .baseSpeed     = 63,
-        .baseSpAttack  = 45,
-        .baseSpDefense = 55,
+        .baseHP        = 48,
+        .baseAttack    = 51,
+        .baseDefense   = 53,
+        .baseSpeed     = 76,
+        .baseSpAttack  = 41,
+        .baseSpDefense = 41,
         .type1 = TYPE_GRASS,
         .type2 = TYPE_GRASS,
         .catchRate = 45,

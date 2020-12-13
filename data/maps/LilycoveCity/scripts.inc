@@ -247,7 +247,7 @@ LilycoveCity_EventScript_May:: @ 81E2DF8
 	switch VAR_STARTER_MON
 	case 0, LilycoveCity_EventScript_BattleMayTreecko
 	case 1, LilycoveCity_EventScript_BattleMayTorchic
-	case 2, LilycoveCity_EventScript_BattleMayMudkip
+	case 2, LilycoveCity_EventScript_BattleMayFlobra
 	end
 
 LilycoveCity_EventScript_MayAskToBattleAgain:: @ 81E2E48
@@ -276,7 +276,7 @@ LilycoveCity_EventScript_Brendan:: @ 81E2E6B
 	switch VAR_STARTER_MON
 	case 0, LilycoveCity_EventScript_BattleBrendanTreecko
 	case 1, LilycoveCity_EventScript_BattleBrendanTorchic
-	case 2, LilycoveCity_EventScript_BattleBrendanMudkip
+	case 2, LilycoveCity_EventScript_BattleBrendanFlobra
 	end
 
 LilycoveCity_EventScript_BrendanAskToBattleAgain:: @ 81E2EBB
@@ -305,8 +305,8 @@ LilycoveCity_EventScript_BattleMayTorchic:: @ 81E2EEE
 	goto LilycoveCity_EventScript_DefeatedMay
 	end
 
-LilycoveCity_EventScript_BattleMayMudkip:: @ 81E2EFE
-	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_MUDKIP, LilycoveCity_Text_MayDefeat
+LilycoveCity_EventScript_BattleMayFlobra:: @ 81E2EFE
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_FLOBRA, LilycoveCity_Text_MayDefeat
 	goto LilycoveCity_EventScript_DefeatedMay
 	end
 
@@ -320,8 +320,8 @@ LilycoveCity_EventScript_BattleBrendanTorchic:: @ 81E2F1E
 	goto LilycoveCity_EventScript_DefeatedBrendan
 	end
 
-LilycoveCity_EventScript_BattleBrendanMudkip:: @ 81E2F2E
-	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_MUDKIP, LilycoveCity_Text_BrendanDefeat
+LilycoveCity_EventScript_BattleBrendanFlobra:: @ 81E2F2E
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_FLOBRA, LilycoveCity_Text_BrendanDefeat
 	goto LilycoveCity_EventScript_DefeatedBrendan
 	end
 

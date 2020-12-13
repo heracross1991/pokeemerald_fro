@@ -41,6 +41,7 @@ WalmoreTown_PokemonCenter_1F_EventScript_WirelessClubAvailable::
 GivemonTest::
 lock
 msgbox T_TakeThesePokes, MSGBOX_NPC
+giveitem ITEM_RARE_CANDY, 99
 givemon SPECIES_FEEBAS, 5, ITEM_NONE
 givemon SPECIES_MILOTIC, 5, ITEM_NONE
 givemon SPECIES_MAGNEMITE, 5, ITEM_NONE

@@ -40,7 +40,7 @@ Route103_EventScript_RivalMay:: @ 81EC3DA
 	switch VAR_STARTER_MON
 	case 0, Route103_EventScript_StartMayBattleTreecko
 	case 1, Route103_EventScript_StartMayBattleTorchic
-	case 2, Route103_EventScript_StartMayBattleMudkip
+	case 2, Route103_EventScript_StartMayBattleFlobra
 	end
 
 Route103_EventScript_RivalBrendan:: @ 81EC434
@@ -57,7 +57,7 @@ Route103_EventScript_RivalBrendan:: @ 81EC434
 	switch VAR_STARTER_MON
 	case 0, Route103_EventScript_StartBrendanBattleTreecko
 	case 1, Route103_EventScript_StartBrendanBattleTorchic
-	case 2, Route103_EventScript_StartBrendanBattleMudkip
+	case 2, Route103_EventScript_StartBrendanBattleFlobra
 	end
 
 Route103_EventScript_StartMayBattleTreecko:: @ 81EC48E
@@ -70,8 +70,8 @@ Route103_EventScript_StartMayBattleTorchic:: @ 81EC49E
 	goto Route103_EventScript_AfterMayBattle
 	end
 
-Route103_EventScript_StartMayBattleMudkip:: @ 81EC4AE
-	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_MUDKIP, Route103_Text_MayDefeated
+Route103_EventScript_StartMayBattleFlobra:: @ 81EC4AE
+	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_FLOBRA, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
 
@@ -85,8 +85,8 @@ Route103_EventScript_StartBrendanBattleTorchic:: @ 81EC4CE
 	goto Route103_EventScript_AfterBrendanBattle
 	end
 
-Route103_EventScript_StartBrendanBattleMudkip:: @ 81EC4DE
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_MUDKIP, Route103_Text_BrendanDefeated
+Route103_EventScript_StartBrendanBattleFlobra:: @ 81EC4DE
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_FLOBRA, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
 

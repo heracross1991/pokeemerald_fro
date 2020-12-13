@@ -2,7 +2,7 @@ static const union AnimCmd *const sAnims_Hiker[] ={
     sAnim_GeneralFrame0,
 };
 
-static const union AnimCmd *const sAnims_AquaGruntM[] ={
+static const union AnimCmd *const sAnims_LibertyGruntM[] ={
     sAnim_GeneralFrame0,
 };
 
@@ -377,7 +377,7 @@ static const union AnimCmd *const sAnims_John[] ={
 const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
 {
     [TRAINER_PIC_HIKER] = sAnims_Hiker,
-    [TRAINER_PIC_AQUA_GRUNT_M] = sAnims_AquaGruntM,
+    [TRAINER_PIC_LIBERTY_GRUNT_M] = sAnims_LibertyGruntM,
     [TRAINER_PIC_POKEMON_BREEDER_F] = sAnims_PokemonBreederF,
     [TRAINER_PIC_COOLTRAINER_M] = sAnims_CoolTrainerM,
     [TRAINER_PIC_BIRD_KEEPER] = sAnims_BirdKeeper,

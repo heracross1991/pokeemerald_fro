@@ -1546,23 +1546,23 @@ const u8 gBlazikenPokedexText[] = _(
     "feathers burn off, and new, supple\n"
     "feathers grow back in their place.");
 
-const u8 gMudkipPokedexText[] = _(
-    "On land, it can powerfully lift large\n"
-    "boulders by planting its four feet and\n"
-    "heaving. It sleeps by burying itself in soil\n"
-    "at the water's edge.");
+const u8 gFlobraPokedexText[] = _(
+    "A slithery body of water and strangely\n"
+    "metallic head. Experts have yet to decide\n"
+    "if Flobra's head is natural or manmade. It\n"
+    "is sometimes seen going through the rain.");
 
-const u8 gMarshtompPokedexText[] = _(
-    "Its toughened hind legs enable it to stand\n"
-    "upright. Because it weakens if its skin\n"
-    "dries out, it replenishes fluids by playing\n"
-    "in mud.");
+const u8 gMorphloPokedexText[] = _(
+    "Morphlo's head revolves like an engine,\n"
+    "moving very fast, especially on water.\n"
+    "Some days, if can be seen feeding on\n"
+    "a tree frog");
 
 const u8 gSwampertPokedexText[] = _(
-    "If it senses the approach of a storm and\n"
-    "a tidal wave, it protects its seaside nest\n"
-    "by piling up boulders. It swims as fast as\n"
-    "a jet ski.");
+    "Mechobra's shoulder cannons are both\n"
+    "fast and deadly. When it locks on to it's\n"
+    "prey, their ordeal becomes the trail to\n"
+    "survive.");
 
 const u8 gPoochyenaPokedexText[] = _(
     "It savagely threatens foes with bared\n"
@@ -2338,23 +2338,23 @@ const u8 gTorterraPokedexText[] = _(
     "Ancient people imagined that beneath \n"
     "the ground, a gigantic Torterra dwelled.");
 
-const u8 gChimcharPokedexText[] = _(
-    "Its fiery rear end is fueled by gas made\n"
-    "in its belly. Before going to sleep,\n"
-    "Chimchar extinguish the flame on their\n"
-    "tails to prevent fires.");
+const u8 gEmborypsPokedexText[] = _(
+    "Embyrops are very shy. They prefer the\n" 
+    "comfort of their egg shell, and use\n"
+    "their tails as the main tool for\n"
+    "collecting food.");
 
 const u8 gMonfernoPokedexText[] = _(
-    "It carefully controls the intensity of\n"
-    "the flame on its tail, so as to keep its\n"
-    "foes at an adequate distance.\n"
-    "Its fiery tail is but one weapon.");
+    "Because they are used to living inside\n"
+    "their shell, Huntoryps prefer darker\n"
+    "environments, and cover their eyes with\n"
+    "parts of their shell as they grow up");
 
 const u8 gInfernapePokedexText[] = _(
-    "Its crown of fire is indicative of its\n"
-    "fiery nature. It uses a special kind of\n"
-    "martial arts involving all of its limbs to\n"
-    "take on any opponent.");
+    "Don't be fooled by Riptoryps' blindfold.\n"
+    "They have special Sensors in their wings\n"
+    "that seek and find their enemies better\n"
+    "than a drone");
 
 const u8 gPiplupPokedexText[] = _(
     "A poor walker, it often falls down. However,\n"
@@ -2969,23 +2969,23 @@ const u8 gVictiniPokedexText[] = _(
     "always win, regardless of the type\n"
     "of encounter.");
 
-const u8 gSnivyPokedexText[] = _(
-    "It is very intelligent and calm.\n"
-    "Being exposed to lots of sunlight makes\n"
-    "its movements swifter. When they are\n"
-    "not feeling well, their tails droop.");
+const u8 gRascalootPokedexText[] = _(
+    "Rascaloots love berries, and a pack of\n"
+    "them can eat all the berries from a field\n"
+    "in a day. When there are none left, they\n"
+    "resort to stealing from shipping crates.");
 
 const u8 gServinePokedexText[] = _(
-    "When it gets dirty, its leaves can't be\n"
-    "used in photosynthesis, so it always keeps\n"
-    "clean. They avoid attacks by sinking into\n"
-    "the shadows of thick foliage.");
+    "Bandithug are aggressive and\n"
+    "territorial. Rival gangs of these\n"
+    "Pokémon are often seen battling over\n"
+    "berry turf");
 
 const u8 gSerperiorPokedexText[] = _(
-    "They raise their heads to intimidate foes,\n"
-    "but only give it their all when fighting\n"
-    "powerful opponents who are not fazed\n"
-    "by the glare from its noble eyes.");
+    "Ruthlash believe in taking everything\n"
+    "by force. Equipped with thorny vines\n"
+    "and a massive physique, no Pokémon\n"
+    "dare to cross their territory");
 
 const u8 gTepigPokedexText[] = _(
     "It loves to eat roasted berries, but\n"

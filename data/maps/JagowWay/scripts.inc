@@ -27,6 +27,25 @@ Route117_Text_FlagDeactivated:
 	.string "Wild encounter deactivated$"
 
 
+Script_JagowWay_TrainTracks_Right::
+	lock
+	msgbox T_JagowWay_TrainTracks, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, M_TrainTracks_Right
+	waitmovement OBJ_EVENT_ID_PLAYER
+	closemessage
+	release
+	end
+
+Script_JagowWay_TrainTracks_Left::
+	lock
+	msgbox T_JagowWay_TrainTracks, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, M_TrainTracks_Left
+	waitmovement OBJ_EVENT_ID_PLAYER
+	closemessage
+	release
+	end
+
+
 Script_JagowWay_StarterBattle:: 
 	lock
 	addobject 1
@@ -38,22 +57,22 @@ Script_JagowWay_StarterBattle::
 	playbgm MUS_BOY_SUP, 1
 	msgbox T_JagowWay_JohnBattleDialouge2, MSGBOX_DEFAULT
 	switch VAR_STARTER_CHOICE
-	case 1, Script_JagowWay_StarterBattleSnivy
-	case 2, Script_JagowWay_StarterBattleMudkip
-	case 3, Script_JagowWay_StarterBattleChimchar
+	case 1, Script_JagowWay_StarterBattleRascaloot
+	case 2, Script_JagowWay_StarterBattleFlobra
+	case 3, Script_JagowWay_StarterBattleEmboryps
 	end
 	
-Script_JagowWay_StarterBattleSnivy:
-	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_MUDKIP, T_JagowWay_JohnDefeated
+Script_JagowWay_StarterBattleRascaloot:
+	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_FLOBRA, T_JagowWay_JohnDefeated
 	goto Script_JagowWay_AfterJohnBattle
 	end
 
-Script_JagowWay_StarterBattleMudkip:
+Script_JagowWay_StarterBattleFlobra:
 	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_TREECKO, T_JagowWay_JohnDefeated
 	goto Script_JagowWay_AfterJohnBattle
 	end
 
-Script_JagowWay_StarterBattleChimchar:
+Script_JagowWay_StarterBattleEmboryps:
 	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_TORCHIC, T_JagowWay_JohnDefeated
 	goto Script_JagowWay_AfterJohnBattle
 	end	
@@ -69,9 +88,9 @@ Script_JagowWay_StarterBattle2::
 	playbgm MUS_BOY_SUP, 1
 	msgbox T_JagowWay_JohnBattleDialouge2, MSGBOX_DEFAULT
 	switch VAR_STARTER_CHOICE
-	case 1, Script_JagowWay_StarterBattleSnivy
-	case 2, Script_JagowWay_StarterBattleMudkip
-	case 3, Script_JagowWay_StarterBattleChimchar
+	case 1, Script_JagowWay_StarterBattleRascaloot
+	case 2, Script_JagowWay_StarterBattleFlobra
+	case 3, Script_JagowWay_StarterBattleEmboryps
 	end
 	
 Script_JagowWay_AfterJohnBattle:
@@ -97,6 +116,14 @@ release
 end
 
 //Movements
+
+M_TrainTracks_Left:
+walk_right
+step_end
+
+M_TrainTracks_Right:
+walk_left
+step_end
 
 M_JagowWay_JohnLeaves:
 walk_right
@@ -150,3 +177,6 @@ T_JohnAfterBattle:
 	.string "John: Great job Fro. I look forward \nto seeing you grow as a trainer. \pNext time I won't take it easy on \nyou.\p"
 	.string "Now I'm going to head to Summit \nCity to challenge the Gym there! \pYou should too!\p"
 	.string "I bet Bobby is already there. \pCan't get too far behind!$"
+
+T_JagowWay_TrainTracks:
+	.string "Mom always says to stay of the \ntrain tracks. You could get hurt.$"

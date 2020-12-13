@@ -3573,7 +3573,7 @@ struct TrainerSlide
 
 static const struct TrainerSlide sTrainerSlides[] =
 {
-	{TRAINER_JOHN_JAGOW_WAY_MUDKIP, sText_JohnBattleStart, NULL, NULL, NULL, NULL},
+	{TRAINER_JOHN_JAGOW_WAY_FLOBRA, sText_JohnBattleStart, NULL, NULL, NULL, NULL},
 	{TRAINER_JOHN_JAGOW_WAY_TREECKO, sText_JohnBattleStart, NULL, NULL, NULL, NULL},
 	{TRAINER_JOHN_JAGOW_WAY_TORCHIC, sText_JohnBattleStart, NULL, NULL, NULL, NULL},
 };

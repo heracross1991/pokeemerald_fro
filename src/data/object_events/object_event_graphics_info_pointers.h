@@ -115,7 +115,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MovingBox;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CableCar;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Scientist2;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DevonEmployee;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AquaMemberM;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LibertyGruntA;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AquaMemberF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MagmaMemberM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MagmaMemberF;
@@ -154,7 +154,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DittoDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SmoochumDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TreeckoDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TorchicDoll;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MudkipDoll;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FlobraDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DuskullDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WynautDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BaltoyDoll;
@@ -364,7 +364,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_CABLE_CAR] =                &gObjectEventGraphicsInfo_CableCar,
     [OBJ_EVENT_GFX_SCIENTIST_2] =              &gObjectEventGraphicsInfo_Scientist2,
     [OBJ_EVENT_GFX_DEVON_EMPLOYEE] =           &gObjectEventGraphicsInfo_DevonEmployee,
-    [OBJ_EVENT_GFX_AQUA_MEMBER_M] =            &gObjectEventGraphicsInfo_AquaMemberM,
+    [OBJ_EVENT_GFX_LIBERTY_GRUNT_A] =            &gObjectEventGraphicsInfo_LibertyGruntA,
     [OBJ_EVENT_GFX_AQUA_MEMBER_F] =            &gObjectEventGraphicsInfo_AquaMemberF,
     [OBJ_EVENT_GFX_MAGMA_MEMBER_M] =           &gObjectEventGraphicsInfo_MagmaMemberM,
     [OBJ_EVENT_GFX_MAGMA_MEMBER_F] =           &gObjectEventGraphicsInfo_MagmaMemberF,
@@ -403,7 +403,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SMOOCHUM_DOLL] =            &gObjectEventGraphicsInfo_SmoochumDoll,
     [OBJ_EVENT_GFX_TREECKO_DOLL] =             &gObjectEventGraphicsInfo_TreeckoDoll,
     [OBJ_EVENT_GFX_TORCHIC_DOLL] =             &gObjectEventGraphicsInfo_TorchicDoll,
-    [OBJ_EVENT_GFX_MUDKIP_DOLL] =              &gObjectEventGraphicsInfo_MudkipDoll,
+    [OBJ_EVENT_GFX_FLOBRA_DOLL] =              &gObjectEventGraphicsInfo_FlobraDoll,
     [OBJ_EVENT_GFX_DUSKULL_DOLL] =             &gObjectEventGraphicsInfo_DuskullDoll,
     [OBJ_EVENT_GFX_WYNAUT_DOLL] =              &gObjectEventGraphicsInfo_WynautDoll,
     [OBJ_EVENT_GFX_BALTOY_DOLL] =              &gObjectEventGraphicsInfo_BaltoyDoll,

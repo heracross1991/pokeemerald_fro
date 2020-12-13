@@ -22,6 +22,11 @@
       "direction": "right",
       "offset": 0,
       "map": "MAP_SUMMIT_CITY_TOP_CORNER"
+    },
+    {
+      "direction": "right",
+      "offset": 33,
+      "map": "MAP_WILLIAMS_TRAIL_EAST"
     }
   ],
   "object_events": [

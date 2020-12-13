@@ -1612,7 +1612,7 @@ const u16 gEggMoves[] = {
 		MOVE_FLAME_BURST,
 		MOVE_LOW_KICK),
 
-	egg_moves(MUDKIP,
+	egg_moves(FLOBRA,
 		MOVE_REFRESH,
 		MOVE_UPROAR,
 		MOVE_CURSE,
@@ -2406,7 +2406,7 @@ const u16 gEggMoves[] = {
 		MOVE_GRASSY_TERRAIN,
 		MOVE_HEAVY_SLAM),
 
-	egg_moves(CHIMCHAR,
+	egg_moves(EMBORYPS,
 		MOVE_FIRE_PUNCH,
 		MOVE_THUNDER_PUNCH,
 		MOVE_DOUBLE_KICK,
@@ -2877,7 +2877,7 @@ const u16 gEggMoves[] = {
 		MOVE_NATURAL_GIFT,
 		MOVE_BULLET_SEED),
 
-	egg_moves(SNIVY,
+	egg_moves(RASCALOOT,
 		MOVE_CAPTIVATE,
 		MOVE_NATURAL_GIFT,
 		MOVE_GLARE,

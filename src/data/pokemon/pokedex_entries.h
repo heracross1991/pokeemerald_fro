@@ -3096,31 +3096,31 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 4,
     },
 
-    [NATIONAL_DEX_MUDKIP] =
+    [NATIONAL_DEX_FLOBRA] =
     {
-        .categoryName = _("MUD FISH"),
+        .categoryName = _("Liquid Snake"),
         .height = 4,
         .weight = 76,
-        .description = gMudkipPokedexText,
+        .description = gFlobraPokedexText,
         .pokemonScale = 535,
         .pokemonOffset = 20,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_MARSHTOMP] =
+    [NATIONAL_DEX_MORPHLO] =
     {
         .categoryName = _("MUD FISH"),
         .height = 7,
         .weight = 280,
-        .description = gMarshtompPokedexText,
+        .description = gMorphloPokedexText,
         .pokemonScale = 340,
         .pokemonOffset = 7,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_SWAMPERT] =
+    [NATIONAL_DEX_MECHOBRA] =
     {
         .categoryName = _("MUD FISH"),
         .height = 15,
@@ -4680,12 +4680,12 @@ const struct PokedexEntry gPokedexEntries[] =
 		.trainerOffset = 0,
 	},
 
-	[NATIONAL_DEX_CHIMCHAR] =
+	[NATIONAL_DEX_EMBORYPS] =
 	{
-		.categoryName = _("Chimp"),
+		.categoryName = _("Egg"),
 		.height = 5,
 		.weight = 62,
-		.description = gChimcharPokedexText,
+		.description = gEmborypsPokedexText,
 		.pokemonScale = 356,
 		.pokemonOffset = 17,
 		.trainerScale = 256,
@@ -5940,12 +5940,12 @@ const struct PokedexEntry gPokedexEntries[] =
 		.trainerOffset = 0,
 	},
 
-	//[NATIONAL_DEX_SNIVY] =
+	//[NATIONAL_DEX_RASCALOOT] =
 	//{
 	//	.categoryName = _("Grass Snake"),
 	//	.height = 6,
 	//	.weight = 81,
-	//	.description = gSnivyPokedexText,
+	//	.description = gRascalootPokedexText,
 	//	.pokemonScale = 356,
 	//	.pokemonOffset = 17,
 	//	.trainerScale = 256,
@@ -9720,7 +9720,7 @@ const struct PokedexEntry gPokedexEntries[] =
 		.trainerOffset = 2,
 	},
 
-	[NATIONAL_DEX_COOTINY] =
+	[NATIONAL_DEX_RASCALOOT] =
 	{
 		.categoryName = _("Bandicoot"),
 		.height = 25,

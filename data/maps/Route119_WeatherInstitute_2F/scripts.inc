@@ -66,7 +66,7 @@ Route119_WeatherInstitute_2F_EventScript_ShellyDefeated:: @ 826FFC8
 	fadedefaultbgm
 	fadescreen FADE_TO_BLACK
 	setflag FLAG_HIDE_ROUTE_119_TEAM_AQUA
-	setflag FLAG_HIDE_WEATHER_INSTITUTE_2F_AQUA_GRUNT_M
+	setflag FLAG_HIDE_WEATHER_INSTITUTE_2F_LIBERTY_GRUNT_M
 	removeobject 1
 	removeobject 2
 	removeobject 3

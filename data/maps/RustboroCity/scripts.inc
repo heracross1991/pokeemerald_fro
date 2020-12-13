@@ -880,7 +880,7 @@ RustboroCity_EventScript_BattleMay:: @ 81E1092
 	switch VAR_STARTER_MON
 	case 0, RustboroCity_EventScript_BattleMayTreecko
 	case 1, RustboroCity_EventScript_BattleMayTorchic
-	case 2, RustboroCity_EventScript_BattleMayMudkip
+	case 2, RustboroCity_EventScript_BattleMayFlobra
 	end
 
 RustboroCity_EventScript_MayBrineyHint:: @ 81E10C1
@@ -907,8 +907,8 @@ RustboroCity_EventScript_BattleMayTorchic:: @ 81E10EE
 	goto RustboroCity_EventScript_MayBrineyHint
 	end
 
-RustboroCity_EventScript_BattleMayMudkip:: @ 81E1101
-	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_MUDKIP, RustboroCity_Text_MayDefeat
+RustboroCity_EventScript_BattleMayFlobra:: @ 81E1101
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_FLOBRA, RustboroCity_Text_MayDefeat
 	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
 	goto RustboroCity_EventScript_MayBrineyHint
 	end
@@ -949,7 +949,7 @@ RustboroCity_EventScript_BattleBrendan:: @ 81E1191
 	switch VAR_STARTER_MON
 	case 0, RustboroCity_EventScript_BattleBrendanTreecko
 	case 1, RustboroCity_EventScript_BattleBrendanTorchic
-	case 2, RustboroCity_EventScript_BattleBrendanMudkip
+	case 2, RustboroCity_EventScript_BattleBrendanFlobra
 	end
 
 RustboroCity_EventScript_BrendanBrineyHint:: @ 81E11C0
@@ -971,8 +971,8 @@ RustboroCity_EventScript_BattleBrendanTorchic:: @ 81E11E8
 	goto RustboroCity_EventScript_BrendanBrineyHint
 	end
 
-RustboroCity_EventScript_BattleBrendanMudkip:: @ 81E11FB
-	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_MUDKIP, RustboroCity_Text_BrendanDefeat
+RustboroCity_EventScript_BattleBrendanFlobra:: @ 81E11FB
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_FLOBRA, RustboroCity_Text_BrendanDefeat
 	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
 	goto RustboroCity_EventScript_BrendanBrineyHint
 	end

@@ -258,7 +258,7 @@ gCryTable:: @ 869DCF4
 	cry Cry_Torchic
 	cry Cry_Combusken
 	cry Cry_Blaziken
-	cry Cry_Mudkip
+	cry Cry_Flobra
 	cry Cry_Marshtomp
 	cry Cry_Swampert
 	cry Cry_Poochyena
@@ -390,7 +390,7 @@ gCryTable:: @ 869DCF4
 	cry_not Cry_Turtwig
 	cry_not Cry_Grotle
 	cry_not Cry_Torterra
-	cry_not Cry_Chimchar
+	cry_not Cry_Emboryps
 	cry_not Cry_Monferno
 	cry_not Cry_Infernape
 	cry_not Cry_Piplup
@@ -495,7 +495,7 @@ gCryTable:: @ 869DCF4
 	cry_not Cry_Shaymin
 	cry_not Cry_Arceus
 	cry_not Cry_Victini
-	cry_not Cry_Snivy
+	cry_not Cry_Rascaloot
 	cry_not Cry_Servine
 	cry_not Cry_Serperior
 	cry_not Cry_Tepig
@@ -1168,7 +1168,7 @@ gCryTable2:: @ 869EF24
 	cry2 Cry_Torchic
 	cry2 Cry_Combusken
 	cry2 Cry_Blaziken
-	cry2 Cry_Mudkip
+	cry2 Cry_Flobra
 	cry2 Cry_Marshtomp
 	cry2 Cry_Swampert
 	cry2 Cry_Poochyena
@@ -1300,7 +1300,7 @@ gCryTable2:: @ 869EF24
 	cry2_not Cry_Turtwig
 	cry2_not Cry_Grotle
 	cry2_not Cry_Torterra
-	cry2_not Cry_Chimchar
+	cry2_not Cry_Emboryps
 	cry2_not Cry_Monferno
 	cry2_not Cry_Infernape
 	cry2_not Cry_Piplup
@@ -1405,7 +1405,7 @@ gCryTable2:: @ 869EF24
 	cry2_not Cry_Shaymin
 	cry2_not Cry_Arceus
 	cry2_not Cry_Victini
-	cry2_not Cry_Snivy
+	cry2_not Cry_Rascaloot
 	cry2_not Cry_Servine
 	cry2_not Cry_Serperior
 	cry2_not Cry_Tepig
