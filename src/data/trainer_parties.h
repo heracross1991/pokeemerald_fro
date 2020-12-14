@@ -9211,16 +9211,16 @@ static const struct TrainerMonNoItemCustomMoves sParty_MelAndPaul[] = {
 
 static const struct TrainerMonNoItemCustomMoves sParty_JohnAndJay1[] = {
     {
-    .iv = 200,
-    .lvl = 39,
-    .species = SPECIES_MEDICHAM,
-    .moves = {MOVE_PSYCHIC, MOVE_FIRE_PUNCH, MOVE_PSYCH_UP, MOVE_PROTECT}
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_NATU,
+    .moves = {MOVE_PECK, MOVE_LEER, MOVE_NONE, MOVE_NONE}
     },
     {
-    .iv = 200,
-    .lvl = 39,
-    .species = SPECIES_HARIYAMA,
-    .moves = {MOVE_FOCUS_PUNCH, MOVE_ROCK_TOMB, MOVE_REST, MOVE_BELLY_DRUM}
+    .iv = 0,
+    .lvl = 4,
+    .species = SPECIES_WEEDLE,
+    .moves = {MOVE_POISON_STING, MOVE_STRING_SHOT, MOVE_NONE, MOVE_NONE}
     }
 };
 

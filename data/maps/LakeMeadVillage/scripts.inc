@@ -182,6 +182,7 @@ msgbox T_LMV_Soldier3CaughtIsiah, MSGBOX_DEFAULT
 applymovement 7, M_LMV_CaptainExits
 applymovement 5 M_LMV_StoneDetainsIsiah
 waitmovement 7
+delay 30
 warpsilent MAP_LAKE_MEAD_VILLAGE, 255, 22, 23
 setvar VAR_WALMORE_TOWN_STATE, 4
 end
@@ -211,6 +212,14 @@ end
 Script_LMV_IsiahSaved::
 lockall
 msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
+applymovement 5, M_LMV_StoneRetreat
+applymovement 6, M_LMV_BudRetreat
+waitmovement 6
+applymovement 4, M_LMV_IsiahToFro
+waitmovement 4
+msgbox T_LMV_IsiahThanksFro, MSGBOX_DEFAULT
+delay 30
+warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
 releaseall
 end
 
@@ -562,8 +571,7 @@ T_LakeMeadVillage_Isiah_HaventSeenThemTakePotionDresserChecked:
 
 T_LMV_SoLGrunt1:
 	.string "Hey kid, {COLOR RED}stop {COLOR DARK_GREY}bothering me. We're in\n"
-	.string "the middle of very important\l"
-	.string "research.$"
+	.string "the middle of very important\lresearch.$"
 
 T_LMV_SoLGrunt2:
 	.string "We're on strict orders not to let\n"
@@ -571,7 +579,7 @@ T_LMV_SoLGrunt2:
 	.string "We will be done soon. Please move along.$"
 
 T_LMV_TwoSoldiersTalking:
-	.string "Soldier 1: This is so boring. I wish \nwe could be doing something with a\l little more action!\p"
+	.string "Soldier 1: This is so boring. I wish \nwe could be doing something with a\llittle more action!\p"
 	.string "Soldier 2: It might not be the most \nfun, but we can't let anyone from town\lsee what we are doing, or it could \lruin our plans.\p"
 	.string "Soldier 1: Yea but this town only has \nlike 10 residents, who is going to try \lto sneak in? Besides it's not like \lthere has to be two of us here to be \lon lookout.\p"
 	.string "Soldier 2: Quiet down, captain is \ncoming back.$"
@@ -594,7 +602,7 @@ T_LMV_JohnNotEnoughMons:
 	.string "You're to weak to stop us any. \nYou don't even have two pokemon!\pNow run along and play hero somewhere else$"
 
 T_LMV_IsiahSaved:
-	.string "I can't believe we lost to a child. \nHow embarassing. \pLet's retreat back to headquarters. \nThis isn't the last you've seen of the \lSons of Liberty.$"
+	.string "I can't believe we lost to a child. \nHow embarassing. \pLet's retreat back to headquarters. \nThis isn't the last you've seen of\lTeam MAGA.$"
 
 T_LMV_JohnDefeat:
 	.string "Oh, Captain is going to be so mad!$"

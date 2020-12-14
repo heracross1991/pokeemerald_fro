@@ -96,6 +96,8 @@ Script_JagowWay_StarterBattle2::
 Script_JagowWay_AfterJohnBattle:
 setvar VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 5
 msgbox T_JohnAfterBattle MSGBOX_DEFAULT
+giveitem ITEM_POKE_BALL, 5
+msgbox T_JW_JagowWoodsClosed, MSGBOX_DEFAULT
 closemessage
 fadedefaultbgm
 applymovement 1, M_JagowWay_JohnLeaves
@@ -175,8 +177,16 @@ T_JagowWay_JohnDefeated:
 	
 T_JohnAfterBattle:
 	.string "John: Great job Fro. I look forward \nto seeing you grow as a trainer. \pNext time I won't take it easy on \nyou.\p"
-	.string "Now I'm going to head to Summit \nCity to challenge the Gym there! \pYou should too!\p"
-	.string "I bet Bobby is already there. \pCan't get too far behind!$"
+	.string "Oh yea, I just remembered,\nyou've never caught a Pokémon in the\lwild!\p" 
+	.string "I hear Walmore Town's Pokémart is sold out of Pokéballs. \pHere take these.$"
 
 T_JagowWay_TrainTracks:
 	.string "Mom always says to stay of the \ntrain tracks. You could get hurt.$"
+
+T_JW_JagowWoodsClosed:
+	.string "You want to use these once you've \nweakened a wild Pokémon, it will be \leasier to catch that way.\p"
+	.string "Normally I would say to go to Summit\nCity and start your Gym Challenge \lthere"
+	.string "but Bobby already\lmade it there and the entrance is \lblocked.\p"
+	.string "Looks like all of us will have to \nstart the Gym Challenge in Lynch \lPark instead.\p"
+	.string "I'm going to stop home real quick \nsince it's on the way, but you can \ljust take Walmore to Lancelot to get \lthere.\p"
+	.string "Better get going, we've got a lot of \ncatching up to do. \pSee you, and good luck!$"
