@@ -137,6 +137,8 @@ Script_LakeMeadVillage_TilyouStopsYouFromLeaving2::
 
 Script_LMV_WarpToCutscene::
 hideobjectat OBJ_EVENT_ID_PLAYER, MAP_LAKE_MEAD_VILLAGE
+hideobjectat  4, MAP_LAKE_MEAD_VILLAGE
+hideobjectat  7, MAP_LAKE_MEAD_VILLAGE
 release
 end 
 
@@ -150,16 +152,17 @@ end
 Script_LMV_MoveIsiah2::
 setobjectxyperm 4, 9, 0
 setobjectmovementtype 4, MOVEMENT_TYPE_NONE
-setobjectxyperm 7, 9, 0
+setobjectxyperm 7, 8, 0
 setobjectmovementtype 7, MOVEMENT_TYPE_NONE
 end
 
 Script_LMV_IsiahAndCaptainPosition:
 setobjectxyperm 4, 9, 4
 setobjectmovementtype 4, MOVEMENT_TYPE_NONE
-setobjectxyperm 7, 8, 4
+setobjectxyperm 7, 8, 0
+setobjectxyperm 5, 9, 3
 setobjectmovementtype 7, MOVEMENT_TYPE_NONE
-setobjectmovementtype 5, MOVEMENT_TYPE_FACE_UP
+setobjectmovementtype 5, MOVEMENT_TYPE_NONE
 setobjectmovementtype 6, MOVEMENT_TYPE_FACE_UP
 end
 
@@ -169,16 +172,47 @@ delay 30
 msgbox T_LMV_TwoSoldiersTalking, MSGBOX_DEFAULT
 applymovement 5, M_LookUp
 applymovement 6, M_LookUp
+waitmovement 6
+showobjectat 4, MAP_LAKE_MEAD_VILLAGE
+showobjectat 7, MAP_LAKE_MEAD_VILLAGE
 applymovement 4, M_LMV_IsiahCaught
 applymovement 7, M_LMV_Soldier1CaughtIsiah
 waitmovement 7
 msgbox T_LMV_Soldier3CaughtIsiah, MSGBOX_DEFAULT
+applymovement 7, M_LMV_CaptainExits
+applymovement 5 M_LMV_StoneDetainsIsiah
+waitmovement 7
 warpsilent MAP_LAKE_MEAD_VILLAGE, 255, 22, 23
 setvar VAR_WALMORE_TOWN_STATE, 4
 end
 
+Script_LMV_DoubleBattleVarCompare::
+lockall
+compare VAR_WALMORE_TOWN_STATE, 4
+goto_if_eq Script_LMV_DoubleBattleTrigger
+releaseall
+end
+
+Script_LMV_DoubleBattleTrigger::
+lockall
+applymovement 6, Common_Movement_FacePlayer
+msgbox T_LMV_StartBattleSequence, MSGBOX_DEFAULT
+trainerbattle_double TRAINER_JOHN_AND_JAY_1, T_LMV_SoldierBattleStart, T_LMV_JohnDefeat, T_LMV_JohnNotEnoughMons, Script_LMV_IsiahSaved
+releaseall
+end
+
 Script_LMV_SaveIsiah::
-m
+lockall
+msgbox T_LMV_StartBattleSequence, MSGBOX_NPC
+trainerbattle_double TRAINER_JOHN_AND_JAY_1, T_LMV_SoldierBattleStart, T_LMV_JohnDefeat, T_LMV_JohnNotEnoughMons, Script_LMV_IsiahSaved
+releaseall
+end
+
+Script_LMV_IsiahSaved::
+lockall
+msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
+releaseall
+end
 
 //NPCs
 Script_LakeMeadVillage_NPC_LittleBoy::
@@ -274,17 +308,34 @@ Script_LakeMeadVillage_NPC_IsiahTakePotionDresserChecked2:
 
 Script_LMV_NPC_SoLGrunt1::
 compare VAR_WALMORE_TOWN_STATE, 4
-goto if_eq Script_LMV_SaveIsiah
+goto_if_eq Script_LMV_SaveIsiah
 msgbox T_LMV_SoLGrunt1, MSGBOX_NPC
 end
 
 Script_LMV_NPC_SoLGrunt2::
 compare VAR_WALMORE_TOWN_STATE, 4
-goto if_eq Script_LMV_SaveIsiah
+goto_if_eq Script_LMV_SaveIsiah
 msgbox T_LMV_SoLGrunt2, MSGBOX_NPC
 end
 
 //Movements
+
+M_LMV_CaptainExits:
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+step_end
+
+
+M_LMV_StoneDetainsIsiah:
+walk_up
+walk_up
+walk_right
+face_down
+step_end
 
 M_LookUp:
 face_up
@@ -301,7 +352,6 @@ M_LMV_Soldier1CaughtIsiah:
 walk_down
 walk_down
 walk_down
-walk_left
 walk_down
 step_end
 
@@ -531,5 +581,20 @@ T_LMV_Soldier3CaughtIsiah:
 	.string "Soldier 1: Sir, I... We...\p"
 	.string "Captian: I don't want to hear any \nexcuses. It doesn't matter now, we \lwill just have to detain him \lindefinitely.\p"
 	.string "Isiah: You can't do that! You have \nto let me go!\p"
-	.string "Captain: Quiet vermin!\pStone, Granger, you're relieved of \nyour lookout duties and will be \lreplaced by someone more qualified. \pI want you to take this child back \nto headquarters and have him locked \laway, he can't tell anyone about \lwhat he has seen. \pAnd don't mess up this time!\p"
+	.string "Captain: Quiet vermin!\pStone, Granger, you're relieved of \nyour lookout duties as we are \ldone in this area anyway. \pI want you to take this child back \nto headquarters and have him locked \laway, he can't tell anyone about \lwhat he has seen. \pI'm going to go grab the rest of the \ngear and I'll meet you back at \lheadquarters.\pOh, and don't mess up this time!\p"
 	.string "Stone, Granger: Sir, yes sir!$"
+
+T_LMV_StartBattleSequence:
+	.string "Granger: Hey kid get out of the way!\nWe are in the middle of something very important!\p...$"
+
+T_LMV_SoldierBattleStart:
+	.string "You can't stop us from detaining \nyour friend, he was tresspassing and \lmust be punished accordingly. \pFine, you don't want to move?\n Then we will have to make you!$"
+
+T_LMV_JohnNotEnoughMons:
+	.string "You're to weak to stop us any. \nYou don't even have two pokemon!\pNow run along and play hero somewhere else$"
+
+T_LMV_IsiahSaved:
+	.string "I can't believe we lost to a child. \nHow embarassing. \pLet's retreat back to headquarters. \nThis isn't the last you've seen of the \lSons of Liberty.$"
+
+T_LMV_JohnDefeat:
+	.string "Oh, Captain is going to be so mad!$"
