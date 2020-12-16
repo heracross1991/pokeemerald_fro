@@ -711,9 +711,10 @@ SecretBase_EventScript_Trainer9PostBattle:: @ 827627C
 
 SecretBase_EventScript_BattleTrainer:: @ 8276286
 	special PrepSecretBaseBattleFlags
-	setvar VAR_0x8004, SPECIAL_BATTLE_SECRET_BASE
-	setvar VAR_0x8005, 0
-	special DoSpecialTrainerBattle
+	//setvar VAR_0x8004, SPECIAL_BATTLE_SECRET_BASE
+	//setvar VAR_0x8005, 0
+	//special DoSpecialTrainerBattle
+	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_TORCHIC, Route103_Text_MayDefeated
 	waitstate
 	compare VAR_RESULT, B_OUTCOME_DREW
 	call_if_eq SecretBase_EventScript_DrewSecretBaseBattle

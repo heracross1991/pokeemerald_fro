@@ -29,6 +29,26 @@ LakeMeadVillage_MapScripts::
 
 //Mapscripts
 
+Script_SUPERDELETELATERTEST::
+checkflag FLAG_UNUSED_0x021
+vgoto_if 1, Script_SUPERTESTDELETELATER
+setflag FLAG_UNUSED_0x021
+msgbox FlagSetMessage, MSGBOX_NPC
+end
+
+Script_SUPERTESTDELETELATER::
+lockall
+clearflag FLAG_UNUSED_0x021
+msgbox FlagClearedMessage, MSGBOX_DEFAULT
+release
+end
+
+FlagClearedMessage:
+	.string "Flag cleared$"
+FlagSetMessage:
+	.string "Flag Set.$"
+
+
 LakeMeadVillage_OnFrame:
 map_script_2 VAR_WALMORE_TOWN_STATE, 2, Script_LMV_MoveIsiah
 map_script_2 VAR_WALMORE_TOWN_STATE, 3, Script_LMV_IsiahCaught
@@ -198,6 +218,8 @@ Script_LMV_DoubleBattleTrigger::
 lockall
 applymovement 6, Common_Movement_FacePlayer
 msgbox T_LMV_StartBattleSequence, MSGBOX_DEFAULT
+applymovement OBJ_EVENT_ID_PLAYER, M_LMV_FroToBattlePosition
+waitmovement OBJ_EVENT_ID_PLAYER
 trainerbattle_double TRAINER_JOHN_AND_JAY_1, T_LMV_SoldierBattleStart, T_LMV_JohnDefeat, T_LMV_JohnNotEnoughMons, Script_LMV_IsiahSaved
 releaseall
 end
@@ -328,6 +350,32 @@ msgbox T_LMV_SoLGrunt2, MSGBOX_NPC
 end
 
 //Movements
+M_LMV_IsiahToFro:
+walk_fastest_down
+step_end
+
+M_LMV_FroToBattlePosition:
+walk_fastest_down
+walk_fastest_right
+face_up
+step_end
+
+
+M_LMV_StoneRetreat:
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+step_end
+
+M_LMV_BudRetreat:
+walk_left
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+step_end
 
 M_LMV_CaptainExits:
 walk_fastest_up
@@ -606,3 +654,6 @@ T_LMV_IsiahSaved:
 
 T_LMV_JohnDefeat:
 	.string "Oh, Captain is going to be so mad!$"
+
+T_LMV_IsiahThanksFro:
+	.string "Thanks Fro!$"
